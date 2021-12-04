@@ -37,8 +37,8 @@ class PrizePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
                   screenHeight * 0.05, screenWidth * 0.05, 0),
-              child: Expanded(
-                flex: 2,
+              child: Container(
+                // flex: 2,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
