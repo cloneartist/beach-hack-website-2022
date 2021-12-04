@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:lottie/lottie.dart' show Lottie;
 
 class PrizePage extends StatelessWidget {
   const PrizePage({Key? key}) : super(key: key);
