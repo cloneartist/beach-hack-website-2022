@@ -293,70 +293,67 @@ Widget buildGameCard(BuildContext context, image, subtitle, content) {
     color: Colors.black,
     clipBehavior: Clip.antiAlias,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-    child: Expanded(
-      child: Column(
-        children: [
-          Stack(
-            children: [
-              Ink.image(
-                image: AssetImage(image),
-                height: 150,
-                child: const InkWell(
-                  focusColor: Colors.amber,
-                ),
-                fit: BoxFit.cover,
+    child: Column(
+      children: [
+        Stack(
+          children: [
+            Ink.image(
+              image: AssetImage(image),
+              height: 150,
+              child: const InkWell(
+                focusColor: Colors.amber,
               ),
-            ],
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              subtitle,
-              style: const TextStyle(
-                  fontSize: 18, color: Colors.white, fontFamily: 'Poppins'),
+              fit: BoxFit.cover,
             ),
+          ],
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            subtitle,
+            style: const TextStyle(
+                fontSize: 18, color: Colors.white, fontFamily: 'Poppins'),
           ),
-          const SizedBox(
-            height: 10,
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            content,
+            style: const TextStyle(
+                fontSize: 12, color: Colors.white, fontFamily: 'Poppins'),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              content,
-              style: const TextStyle(
-                  fontSize: 12, color: Colors.white, fontFamily: 'Poppins'),
-            ),
-          ),
-          const Spacer(
-            flex: 2,
-          ),
-          ButtonBar(
-            alignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          const Color.fromRGBO(99, 199, 255, 1)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ))),
-                  onPressed: () {},
-                  child: const Text(
-                    'Stay Tuned!',
-                    style:
-                        TextStyle(fontFamily: 'Poppins', color: Colors.white),
-                  ))
-            ],
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-        ],
-      ),
+        ),
+        const Spacer(
+          flex: 2,
+        ),
+        ButtonBar(
+          alignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(99, 199, 255, 1)),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                    ))),
+                onPressed: () {},
+                child: const Text(
+                  'Stay Tuned!',
+                  style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
+                ))
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+      ],
     ),
   );
 }
