@@ -199,7 +199,6 @@ Widget buildImageCard(BuildContext context, image, title, subtitle, content) {
     child: Column(
       children: [
         Stack(
-          // alignment: Alignment.center,
           children: [
             Ink.image(
               image: AssetImage(image),
@@ -298,7 +297,6 @@ Widget buildGameCard(BuildContext context, image, subtitle, content) {
       child: Column(
         children: [
           Stack(
-            // alignment: Alignment.center,
             children: [
               Ink.image(
                 image: AssetImage(image),
