@@ -16,8 +16,8 @@ class _SponsersState extends State<Sponsers> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(80, 100, 0, 50),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(80, 100, 0, 50),
               child: Text(
                 "Our Sponsers",
                 style: TextStyle(
@@ -34,14 +34,14 @@ class _SponsersState extends State<Sponsers> {
                   child: CircleAvatar(
                     backgroundColor: Colors.blueGrey,
                     child: IconButton(
-                        icon: Icon(Icons.arrow_back), onPressed: () {}),
+                        icon: const Icon(Icons.arrow_back), onPressed: () {}),
                   ),
                 ),
                 Container(
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.topRight,
                         colors: <Color>[Colors.purple, Colors.blue],
@@ -51,9 +51,9 @@ class _SponsersState extends State<Sponsers> {
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           "Title",
                           style: TextStyle(
@@ -75,19 +75,20 @@ class _SponsersState extends State<Sponsers> {
                     height: 200,
                     width: 200,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.topRight,
                           colors: <Color>[Colors.purple, Colors.blue],
                         ),
                         color: Colors.blue,
                         border: Border.all(),
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "Platinum",
                             style: TextStyle(
@@ -108,19 +109,20 @@ class _SponsersState extends State<Sponsers> {
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.topRight,
                         colors: <Color>[Colors.purple, Colors.blue],
                       ),
                       color: Colors.blue,
                       border: Border.all(),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           "Gold",
                           style: TextStyle(
@@ -146,7 +148,7 @@ class _SponsersState extends State<Sponsers> {
                 ),
               ],
             ),
-            Padding(
+            const Padding(
               padding: const EdgeInsets.fromLTRB(80, 100, 0, 50),
               child: Text(
                 "Outreach Partners",
@@ -171,7 +173,7 @@ class _SponsersState extends State<Sponsers> {
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.topRight,
                         colors: <Color>[Colors.purple, Colors.blue],
@@ -181,7 +183,7 @@ class _SponsersState extends State<Sponsers> {
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
@@ -205,7 +207,7 @@ class _SponsersState extends State<Sponsers> {
                     height: 200,
                     width: 200,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.topRight,
                           colors: <Color>[Colors.purple, Colors.blue],
@@ -215,7 +217,7 @@ class _SponsersState extends State<Sponsers> {
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
@@ -238,7 +240,7 @@ class _SponsersState extends State<Sponsers> {
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.topRight,
                         colors: <Color>[Colors.purple, Colors.blue],
@@ -248,7 +250,7 @@ class _SponsersState extends State<Sponsers> {
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(

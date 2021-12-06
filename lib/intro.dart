@@ -1,4 +1,3 @@
-import 'dart:js_util';
 import 'dart:ui';
 
 import 'package:beach_hack_website/GradientText.dart';
