@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
+
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);
   @override
@@ -12,19 +13,26 @@ class ContactPage extends StatelessWidget {
         color: Colors.black,
         child: ListView(
           children: [
-            SizedBox(height: screenHeight * 0.1,),
+            SizedBox(
+              height: screenHeight * 0.1,
+            ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical:0, horizontal: screenWidth * 0.1),
+              padding: EdgeInsets.symmetric(
+                  vertical: 0, horizontal: screenWidth * 0.1),
               child: Row(
                 children: [
                   Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
-                            screenHeight * 0.08, screenWidth * 0.05, screenHeight * 0.05),
+                        padding: EdgeInsets.fromLTRB(
+                            screenWidth * 0.05,
+                            screenHeight * 0.08,
+                            screenWidth * 0.05,
+                            screenHeight * 0.05),
                         child: ShaderMask(
                           shaderCallback: (Rect bounds) {
-                            return gradient.createShader(Offset.zero & bounds.size);
+                            return gradient
+                                .createShader(Offset.zero & bounds.size);
                           },
                           child: const Text(
                             'CONTACT US',
@@ -109,16 +117,19 @@ class ContactPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 30,),
+                      const SizedBox(
+                        height: 30,
+                      ),
                       ButtonTheme(
-                        padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 12.0, horizontal: 16.0),
                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         minWidth: 0,
                         height: 0,
                         child: ElevatedButton(
                             style: ButtonStyle(
-                              shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(18.0),
                                   side: BorderSide(
@@ -128,14 +139,16 @@ class ContactPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            onPressed: () => {}, child: const Text('Submit')),
+                            onPressed: () => {},
+                            child: const Text('Submit')),
                       ),
-                      const SizedBox(height: 30,)
+                      const SizedBox(
+                        height: 30,
+                      )
                     ],
                   ),
                   Container(
-                    child:
-                    Expanded(
+                    child: Expanded(
                       child: Lottie.network(
                         'https://assets4.lottiefiles.com/packages/lf20_eBcQGa.json',
                         animate: true,
@@ -152,7 +165,7 @@ class ContactPage extends StatelessWidget {
               color: Color(0xff242529),
               width: double.infinity,
               height: screenHeight * 0.175,
-                margin: new EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+              margin: new EdgeInsets.symmetric(horizontal: 0, vertical: 0),
               child: Column(
                 children: [
                   Row(),
