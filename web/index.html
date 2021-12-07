@@ -41,6 +41,7 @@
       body {
         margin: 0;
         padding: 0;
+        background-color: black;
       }
       .loading-screen {
         background: black;
@@ -226,6 +227,7 @@
         // Service workers not supported. Just drop the <script> tag.
         loadMainDartJs();
       }
+      setTimeout(() => document.querySelector('.loading-screen').remove(), 15000)
     </script>
   </body>
 </html>
