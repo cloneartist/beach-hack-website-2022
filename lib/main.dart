@@ -1,5 +1,9 @@
+import 'package:beach_hack_website/AboutUs.dart';
+import 'package:beach_hack_website/ContactPage.dart';
 import 'package:beach_hack_website/HomePage.dart';
-import 'package:beach_hack_website/pages/schedule.dart';
+import 'package:beach_hack_website/Prize.dart';
+import 'package:beach_hack_website/footer.dart';
+import 'package:beach_hack_website/intro.dart';
 import 'package:flutter/material.dart';
 
 void main() {
