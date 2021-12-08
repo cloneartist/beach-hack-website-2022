@@ -4,6 +4,7 @@ import 'package:beach_hack_website/HomePage.dart';
 import 'package:beach_hack_website/Prize.dart';
 import 'package:beach_hack_website/footer.dart';
 import 'package:beach_hack_website/intro.dart';
+import 'package:beach_hack_website/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const LandingPage(),
     );
   }
 }
