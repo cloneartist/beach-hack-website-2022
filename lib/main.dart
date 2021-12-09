@@ -5,6 +5,7 @@ import 'package:beach_hack_website/Prize.dart';
 import 'package:beach_hack_website/footer.dart';
 import 'package:beach_hack_website/intro.dart';
 import 'package:beach_hack_website/pages/schedule.dart';
+import 'package:beach_hack_website/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
