@@ -1,18 +1,17 @@
 // ignore_for_file: file_names
 
 import 'package:beach_hack_website/GradientText.dart';
-import 'package:beach_hack_website/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class MobilePage extends StatefulWidget {
+  const MobilePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _MobilePageState createState() => _MobilePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MobilePageState extends State<MobilePage> {
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -23,101 +22,6 @@ class _HomePageState extends State<HomePage> {
       child: Material(
         child: Column(
           children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/beach.jpeg'),
-                    fit: BoxFit.cover),
-              ),
-              child: Stack(
-                children: [
-                  const Align(alignment: Alignment.topCenter, child: NavBar()),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          'BEACH HACK PRESENTS',
-                          style: TextStyle(
-                              fontSize: 32,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: 6.2),
-                        ),
-                        RichText(
-                          text: const TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'BEACH',
-                                style: TextStyle(
-                                    fontSize: 96,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.w900,
-                                    letterSpacing: 6.4),
-                              ),
-                              TextSpan(
-                                text: ' HACK 4',
-                                style: TextStyle(
-                                    fontSize: 96,
-                                    color: Colors.black38,
-                                    fontWeight: FontWeight.w900,
-                                    letterSpacing: 6.4),
-                              )
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  height: 48,
-                                  width: 132,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: const Center(
-                                    child: Text('Devfolio',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 18)),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 64,
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  height: 48,
-                                  width: 132,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blueGrey,
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: const Center(
-                                    child: Text('Discord',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 18)),
-                                  ),
-                                ),
-                              ),
-                            ]),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-            //Hacked name
             Container(
               color: Colors.black,
               child: Padding(
@@ -801,60 +705,60 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: EdgeInsets.fromLTRB(
-                  //     screenWidth * 0.05,
-                  //     50,
-                  //     screenWidth * 0.05,
-                  //     screenWidth * 0.05,
-                  //   ),
-                  //   child: Container(
-                  //     width: MediaQuery.of(context).size.width,
-                  //     decoration: const BoxDecoration(
-                  //       borderRadius: BorderRadius.all(Radius.circular(30)),
-                  //       gradient: LinearGradient(
-                  //           begin: Alignment(-0.7, -1),
-                  //           end: Alignment(0, 0.7),
-                  //           colors: [
-                  //             Color.fromRGBO(184, 19, 225, 1),
-                  //             Color.fromRGBO(245, 44, 153, 1)
-                  //           ]),
-                  //     ),
-                  //     padding: const EdgeInsets.symmetric(
-                  //         horizontal: 30, vertical: 30),
-                  //     child: Column(
-                  //       children: const [
-                  //         Text(
-                  //           'Participation Perks',
-                  //           textAlign: TextAlign.center,
-                  //           style: TextStyle(
-                  //             color: Color.fromRGBO(255, 255, 255, 1),
-                  //             fontFamily: 'Poppins',
-                  //             fontSize: 40,
-                  //             letterSpacing: 0,
-                  //             fontWeight: FontWeight.w700,
-                  //             decoration: TextDecoration.none,
-                  //             height: 1.5,
-                  //           ),
-                  //         ),
-                  //         SizedBox(height: 25),
-                  //         Text(
-                  //           '30-days trial version of any JetBrains IDE\nJet-Brains gratuitous 1-year All Products Pack subscriptions worth 649\$\nComplimentary SashiDo Student Credits\nSashiDo internship offers for selected students\nSashiDo complimentary 45 days Trial\nUnlimited Taskade Membership \$60/month\nVoiceflow Professional License worth 49\$/month\nInterview Cake complimentary course access worth \$149\nechoAR free resource offering',
-                  //           textAlign: TextAlign.center,
-                  //           style: TextStyle(
-                  //             color: Color.fromRGBO(255, 255, 255, 1),
-                  //             fontFamily: 'Poppins',
-                  //             fontSize: 20,
-                  //             letterSpacing: 0,
-                  //             fontWeight: FontWeight.w300,
-                  //             decoration: TextDecoration.none,
-                  //             height: 1.5,
-                  //           ),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  // ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      screenWidth * 0.05,
+                      50,
+                      screenWidth * 0.05,
+                      screenWidth * 0.05,
+                    ),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        gradient: LinearGradient(
+                            begin: Alignment(-0.7, -1),
+                            end: Alignment(0, 0.7),
+                            colors: [
+                              Color.fromRGBO(184, 19, 225, 1),
+                              Color.fromRGBO(245, 44, 153, 1)
+                            ]),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 30),
+                      child: Column(
+                        children: const [
+                          Text(
+                            'Participation Perks',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 40,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w700,
+                              decoration: TextDecoration.none,
+                              height: 1.5,
+                            ),
+                          ),
+                          SizedBox(height: 25),
+                          Text(
+                            '30-days trial version of any JetBrains IDE\nJet-Brains gratuitous 1-year All Products Pack subscriptions worth 649\$\nComplimentary SashiDo Student Credits\nSashiDo internship offers for selected students\nSashiDo complimentary 45 days Trial\nUnlimited Taskade Membership \$60/month\nVoiceflow Professional License worth 49\$/month\nInterview Cake complimentary course access worth \$149\nechoAR free resource offering',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w300,
+                              decoration: TextDecoration.none,
+                              height: 1.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
