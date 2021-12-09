@@ -40,6 +40,7 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: black;
     }
 
     .loading-screen {
@@ -64,7 +65,7 @@
       letter-spacing: 0.505em;
     }
 
-
+    /* Code By Webdevtrick ( https://webdevtrick.com) */
     .loading-screen {
       background: #000;
       text-align: center;
@@ -232,6 +233,7 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+    setTimeout(() => document.querySelector('.loading-screen').remove(), 15000)
   </script>
 </body>
 
