@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--
+
+<head>
+  <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 
@@ -14,218 +15,224 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-    <base href="$FLUTTER_BASE_HREF" />
+  <base href="$FLUTTER_BASE_HREF" />
 
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description" content="A new Flutter project." />
 
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="beach_hack_website" />
-    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="beach_hack_website" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-    <title>beach_hack_website</title>
-    <link rel="manifest" href="manifest.json" />
+  <title>beach_hack_website</title>
+  <link rel="manifest" href="manifest.json" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
 
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      .loading-screen {
-        background: black;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .loading-text {
-        font-family: Poppins;
-        font-style: normal;
-        line-height: 146.5%;
-        margin: 10px;
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.505em;
-      }
+    .loading-screen {
+      background: black;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-      /* Code By Webdevtrick ( https://webdevtrick.com) */
-      .loading-screen {
-        background: #000;
-        text-align: center;
-      }
-      .shimmer {
-        font-weight: 300;
-        font-size: 3em;
-        display: inline;
-        margin-bottom: 0;
-      }
-      .shimmer {
-        text-align: center;
-        color: rgba(255, 255, 255, 0.1);
-        background: -webkit-gradient(
-          linear,
+    .loading-text {
+      font-family: Poppins;
+      font-style: normal;
+      line-height: 146.5%;
+      margin: 10px;
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.505em;
+    }
+
+
+    .loading-screen {
+      background: #000;
+      text-align: center;
+    }
+
+    .shimmer {
+      font-weight: 300;
+      font-size: 3em;
+      display: inline;
+      margin-bottom: 0;
+    }
+
+    .shimmer {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.1);
+      background: -webkit-gradient(linear,
           left top,
           right top,
           from(#222),
           to(#222),
-          color-stop(0.5, #fff)
-        );
-        background: -moz-gradient(
-          linear,
+          color-stop(0.5, #fff));
+      background: -moz-gradient(linear,
           left top,
           right top,
           from(#222),
           to(#222),
-          color-stop(0.5, #fff)
-        );
-        background: gradient(
-          linear,
+          color-stop(0.5, #fff));
+      background: gradient(linear,
           left top,
           right top,
           from(#222),
           to(#222),
-          color-stop(0.5, #fff)
-        );
-        -webkit-background-size: 125px 100%;
-        -moz-background-size: 125px 100%;
-        background-size: 125px 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-animation-name: shimmer;
-        -moz-animation-name: shimmer;
-        animation-name: shimmer;
-        -webkit-animation-duration: 2s;
-        -moz-animation-duration: 2s;
-        animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
-        -moz-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-color: #222;
-      }
-      @-moz-keyframes shimmer {
-        0% {
-          background-position: top left;
-        }
-        100% {
-          background-position: top right;
-        }
-      }
-      @-webkit-keyframes shimmer {
-        0% {
-          background-position: top left;
-        }
-        100% {
-          background-position: top right;
-        }
-      }
-      @-o-keyframes shimmer {
-        0% {
-          background-position: top left;
-        }
-        100% {
-          background-position: top right;
-        }
-      }
-      @keyframes shimmer {
-        0% {
-          background-position: top left;
-        }
-        100% {
-          background-position: top right;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="loading-screen">
-      <div class="top-text loading-text shimmer">BEACH HACK</div>
-      <div class="bottom-text loading-text shimmer">PRESENTS</div>
-    </div>
+          color-stop(0.5, #fff));
+      -webkit-background-size: 125px 100%;
+      -moz-background-size: 125px 100%;
+      background-size: 125px 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      -webkit-animation-name: shimmer;
+      -moz-animation-name: shimmer;
+      animation-name: shimmer;
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-color: #222;
+    }
 
-    <!-- This script installs service_worker.js to provide PWA functionality to
+    @-moz-keyframes shimmer {
+      0% {
+        background-position: top left;
+      }
+
+      100% {
+        background-position: top right;
+      }
+    }
+
+    @-webkit-keyframes shimmer {
+      0% {
+        background-position: top left;
+      }
+
+      100% {
+        background-position: top right;
+      }
+    }
+
+    @-o-keyframes shimmer {
+      0% {
+        background-position: top left;
+      }
+
+      100% {
+        background-position: top right;
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: top left;
+      }
+
+      100% {
+        background-position: top right;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading-screen">
+    <div class="top-text loading-text shimmer">BEACH HACK</div>
+    <div class="bottom-text loading-text shimmer">PRESENTS</div>
+  </div>
+
+  <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
-    <script>
-      var serviceWorkerVersion = null;
-      var scriptLoaded = false;
-      function loadMainDartJs() {
-        if (scriptLoaded) {
-          return;
-        }
-        scriptLoaded = true;
-        var scriptTag = document.createElement("script");
-        scriptTag.src = "main.dart.js";
-        scriptTag.type = "application/javascript";
-        document.body.append(scriptTag);
+  <script>
+    var serviceWorkerVersion = null;
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
       }
+      scriptLoaded = true;
+      var scriptTag = document.createElement("script");
+      scriptTag.src = "main.dart.js";
+      scriptTag.type = "application/javascript";
+      document.body.append(scriptTag);
+    }
 
-      if ("serviceWorker" in navigator) {
-        // Service workers are supported. Use them.
-        window.addEventListener("load", function () {
-          // Wait for registration to finish before dropping the <script> tag.
-          // Otherwise, the browser will load the script multiple times,
-          // potentially different versions.
-          var serviceWorkerUrl =
-            "flutter_service_worker.js?v=" + serviceWorkerVersion;
-          navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener("statechange", () => {
-                if (serviceWorker.state == "activated") {
-                  console.log("Installed new service worker.");
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log("New service worker available.");
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log("Loading app from service worker.");
-              loadMainDartJs();
-            }
-          });
-
-          // If service worker doesn't succeed in a reasonable amount of time,
-          // fallback to plaint <script> tag.
-          setTimeout(() => {
-            if (!scriptLoaded) {
-              console.warn(
-                "Failed to load app from service worker. Falling back to plain <script> tag."
-              );
-              loadMainDartJs();
-            }
-          }, 4000);
+    if ("serviceWorker" in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener("load", function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl =
+          "flutter_service_worker.js?v=" + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
+          function waitForActivation(serviceWorker) {
+            serviceWorker.addEventListener("statechange", () => {
+              if (serviceWorker.state == "activated") {
+                console.log("Installed new service worker.");
+                loadMainDartJs();
+              }
+            });
+          }
+          if (!reg.active && (reg.installing || reg.waiting)) {
+            // No active web worker and we have installed or are installing
+            // one for the first time. Simply wait for it to activate.
+            waitForActivation(reg.installing || reg.waiting);
+          } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+            // When the app updates the serviceWorkerVersion changes, so we
+            // need to ask the service worker to update.
+            console.log("New service worker available.");
+            reg.update();
+            waitForActivation(reg.installing);
+          } else {
+            // Existing service worker is still good.
+            console.log("Loading app from service worker.");
+            loadMainDartJs();
+          }
         });
-      } else {
-        // Service workers not supported. Just drop the <script> tag.
-        loadMainDartJs();
-      }
-    </script>
-  </body>
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              "Failed to load app from service worker. Falling back to plain <script> tag."
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+</body>
+
 </html>
