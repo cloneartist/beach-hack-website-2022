@@ -38,6 +38,16 @@ dependencies:
   cupertino_icons: ^1.0.2
   timelines: ^0.1.0
   auto_size_text: ^3.0.0
+  video_player: ^2.2.7
+  firebase_storage: ^10.2.3
+  universal_html: ^2.0.8
+  animated_text_kit: ^4.2.1
+  water_drop: ^1.0.0
+  liquid_progress_indicator: ^0.4.0
+  simple_animations: ^4.0.1
+  supercharged: ^2.1.1
+  concentric_transition: ^1.0.1+1
+
 
 dev_dependencies:
   flutter_test:

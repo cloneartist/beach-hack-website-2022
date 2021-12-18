@@ -29,9 +29,13 @@ class _NavBarState extends State<NavBar> {
         decoration: const BoxDecoration(color: Colors.black12),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
-            child: FlutterLogo(),
+            child: Image.asset(
+              "assets/images/LOGO_BH_LIGHT.png",
+              height: 64,
+              fit: BoxFit.fitHeight,
+            ),
           ),
           const Padding(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20)),
@@ -90,7 +94,7 @@ class _NavBarItemState extends State<NavBarItem> {
                   ? widget.itemText.toUpperCase()
                   : widget.itemText.toUpperCase(),
               style: TextStyle(
-                  color: widget.isSelected ? Colors.white : Colors.black,
+                  color: widget.isSelected ? Colors.white : Colors.white,
                   fontWeight:
                       widget.isSelected ? FontWeight.w800 : FontWeight.w600,
                   fontSize: widget.isSelected ? 14 : 13,

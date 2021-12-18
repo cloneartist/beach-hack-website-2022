@@ -35,7 +35,7 @@ class _FooterState extends State<Footer> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       //Made with ♥ CODe 2021
                       //Made with Flutter
-                      children: [
+                      children: const [
                         CircleAvatar(
                           radius: 10.0,
                           backgroundImage: AssetImage('assets/images/fb.png'),
@@ -61,11 +61,11 @@ class _FooterState extends State<Footer> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Container(
-                      child: Text(
+                      child: const Text(
                         "  Made with 🤍 CODe 2021\n",
                         style: TextStyle(
                             color: Colors.white,
@@ -73,12 +73,12 @@ class _FooterState extends State<Footer> {
                             fontSize: 10),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Container(
                       child: Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             radius: 7.0,
                             backgroundImage:

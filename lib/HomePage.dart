@@ -1,13 +1,16 @@
 // ignore_for_file: file_names
 
+import 'dart:js';
+
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:beach_hack_website/GradientText.dart';
 import 'package:beach_hack_website/navbar.dart';
+import 'package:beach_hack_website/pages/schedule.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:timelines/timelines.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -15,12 +18,67 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    double row = height * 0.5;
+    bool realColor = true;
+    List<Map<String, String>> schedule = [
+      {
+        "date": "November 1",
+        "name": "Registration Open",
+        "subtitle": "Registration Opens on Website"
+      },
+      {
+        "date": "November 2",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      },
+      {
+        "date": "November 3",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      },
+      {
+        "date": "November 4",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      },
+      {
+        "date": "November 5",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      },
+      {
+        "date": "November 6",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      },
+      {
+        "date": "November 7",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      },
+      {
+        "date": "November 8",
+        "name": "Registration Close",
+        "subtitle": "Registration Closes on Website"
+      }
+    ];
+    final Shader linearGradient = const LinearGradient(
+      colors: <Color>[
+        // Color(0xff3679FD),
+        Color.fromRGBO(54, 121, 253, 1),
+        Color.fromRGBO(87, 122, 188, 1.61)
+        // Color(0xff577ABC).opacity(0.6)
+      ],
+    ).createShader(const Rect.fromLTWH(0.0, 0.0, 40.0, 50.0));
     var screenWidth = MediaQuery.of(context).size.width;
     var screenHeight = MediaQuery.of(context).size.height;
     var cardWidth = screenWidth * 0.20;
     var cardHeight = screenHeight * 0.5;
     return SingleChildScrollView(
       child: Material(
+        color: Colors.black,
         child: Column(
           children: [
             Container(
@@ -28,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/beach.jpeg'),
+                    image: AssetImage('assets/images/bg_img_bg.jpeg'),
                     fit: BoxFit.cover),
               ),
               child: Stack(
@@ -40,10 +98,13 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          'BEACH HACK PRESENTS',
+                          "CODe\nPRESENTS",
+                          // 'BEACH HACK \nPRESENTS\n',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontSize: 32,
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.w800,
                               letterSpacing: 6.2),
                         ),
@@ -54,7 +115,8 @@ class _HomePageState extends State<HomePage> {
                                 text: 'BEACH',
                                 style: TextStyle(
                                     fontSize: 96,
-                                    color: Colors.black87,
+                                    color: Colors.black,
+                                    fontFamily: "Poppins",
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: 6.4),
                               ),
@@ -62,7 +124,8 @@ class _HomePageState extends State<HomePage> {
                                 text: ' HACK 4',
                                 style: TextStyle(
                                     fontSize: 96,
-                                    color: Colors.black38,
+                                    color: Colors.white,
+                                    fontFamily: "Poppins",
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: 6.4),
                               )
@@ -75,38 +138,94 @@ class _HomePageState extends State<HomePage> {
                         Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  height: 48,
-                                  width: 132,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: const Center(
-                                    child: Text('Devfolio',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 18)),
+                              Container(
+                                height: 56,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/devfolio.png",
+                                        width: 40,
+                                        height: 50,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Column(
+                                        children: [
+                                          SizedBox(
+                                            height: 12,
+                                            child: Text(
+                                              'Apply with\n',
+                                              style: TextStyle(
+                                                  fontFamily: 'Poppins',
+                                                  color: Colors.white,
+                                                  fontSize: 10),
+                                            ),
+                                          ),
+                                          Text("Devfolio",
+                                              style: TextStyle(
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                  fontSize: 18)),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
                               const SizedBox(
                                 width: 64,
                               ),
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  height: 48,
-                                  width: 132,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blueGrey,
-                                    borderRadius: BorderRadius.circular(16),
-                                  ),
-                                  child: const Center(
-                                    child: Text('Discord',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 18)),
+                              Container(
+                                height: 56,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff5865F2),
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/discord.png",
+                                        width: 40,
+                                        height: 30,
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        children: [
+                                          SizedBox(
+                                            height: 12,
+                                            child: Text(
+                                              'JOIN US ON\n',
+                                              style: TextStyle(
+                                                  fontFamily: 'Poppins',
+                                                  color: Colors.white,
+                                                  fontSize: 10),
+                                            ),
+                                          ),
+                                          Text("Discord",
+                                              style: TextStyle(
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                  fontSize: 18)),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -127,19 +246,22 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      Wrap(
+                        // crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 1,
+
+                        direction: Axis.vertical,
                         children: const [
                           GradientText(
-                            "HACKED",
+                            " BEACH HACK 4",
                             gradient: gradientBlue,
                             style: TextStyle(
-                                fontSize: 24,
+                                fontSize: 48,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w700),
                           ),
                           GradientText(
-                            "LET'S DEFINE THE NEW",
+                            " THE LEGACY",
                             gradient: gradientBlue,
                             style: TextStyle(
                                 fontSize: 40,
@@ -147,14 +269,17 @@ class _HomePageState extends State<HomePage> {
                                 fontWeight: FontWeight.w700),
                           ),
                           GradientText(
-                            "NORMAL",
+                            " CONTINUES",
                             gradient: gradientBlue,
                             style: TextStyle(
-                                fontSize: 40,
+                                fontSize: 34,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w700),
                           ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 30,
                       ),
                       SizedBox(
                         height:
@@ -178,7 +303,7 @@ class _HomePageState extends State<HomePage> {
                                           CrossAxisAlignment.start,
                                       children: const [
                                         GradientText(
-                                          "HACKED",
+                                          "BEACH HACK 4",
                                           gradient: gradientBlue,
                                           style: TextStyle(
                                               fontFamily: 'Poppins',
@@ -189,11 +314,12 @@ class _HomePageState extends State<HomePage> {
                                           height: 20,
                                         ),
                                         Text(
-                                          "HackEd is the much anticipated third edition of Beach Hackathon. HackEd is educational, sparked with an excitement that can only be attained by determining a socially pertinent dilemma.HackEd is targeted to resolve issues encountered by students and tutors collectively considering the online platforms for learning. It chiefly intends to enhance online education for all by connecting minds simultaneously as a team even during this global pandemic.",
+                                          "Beach Hack 4 is the much anticipated fourth edition of Beach Hackathon, which seeks to become a vital networking arena where talent and opportunity collide. It creates a space for college students and provides them with a helping hand to think from a different perspective. Its main goal is to create software solutions for people with special needs in order to help them overcome their physical and mental limitations.",
+                                          textAlign: TextAlign.justify,
                                           style: TextStyle(
                                               color: Color(0xff898989),
                                               fontFamily: 'Poppins',
-                                              fontSize: 20,
+                                              fontSize: 24,
                                               fontWeight: FontWeight.w300),
                                         ),
                                       ],
@@ -381,7 +507,7 @@ class _HomePageState extends State<HomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                "THEME : ONLINE EDUCATION",
+                                "THEME : CHALLENGES OF SPECIALLY ABLED",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'Poppins',
@@ -394,12 +520,12 @@ class _HomePageState extends State<HomePage> {
                                   const Flexible(
                                     flex: 5,
                                     child: Text(
-                                      "Technology has been considered central to the reform of school education and has gained unprecedented momentum during this pandemic. When the COVID-19 had resulted in schools shut all across the world, over 1.2 billion children were out of the classroom. Online teaching was perceived as the only immediate means to combat all the education related issues, hence there was a rush to transfer classrooms into the virtual world without taking into consideration the reach to all the learners.",
+                                      "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 18th and 19th of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Poppins',
                                         fontWeight: FontWeight.w300,
-                                        fontSize: 20,
+                                        fontSize: 24,
                                       ),
                                     ),
                                   ),
@@ -421,7 +547,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 60,
                       ),
                     ],
                   ),
@@ -430,6 +556,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               color: const Color.fromRGBO(36, 37, 41, 1),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 60),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -499,9 +626,9 @@ class _HomePageState extends State<HomePage> {
                             child: buildImageCard(
                                 context,
                                 'assets/images/codescreen.png',
-                                'Pattern Coding',
-                                'Do You See What I see?',
-                                'Can you break the pattern?')),
+                                'Coding Competition',
+                                'Are you ready to turn caffeine to <Code/>?',
+                                'This Is What Awesome Looks Like')),
                         const Spacer(
                           flex: 1,
                         ),
@@ -512,8 +639,8 @@ class _HomePageState extends State<HomePage> {
                                 context,
                                 'assets/images/htmlscreen.png',
                                 'Web Development',
-                                '''Let's Define the new normal in UI''',
-                                ' ')),
+                                '''We heard you want to be a Web developer/Turn ideas into websites''',
+                                'You are CSS to my HTML, Hop in!')),
                         const Spacer(
                           flex: 1,
                         ),
@@ -524,8 +651,8 @@ class _HomePageState extends State<HomePage> {
                                 context,
                                 'assets/images/iphonescreen.png',
                                 'App Development',
-                                'Can you beat Chintu To it',
-                                'Ready for yet another awesome idea?')),
+                                'Feeling cold? Turn on Android Studio!',
+                                'Let\'s cook something hot!')),
                       ],
                     ),
                   ),
@@ -574,9 +701,9 @@ class _HomePageState extends State<HomePage> {
                             height: cardHeight,
                             child: buildGameCard(
                                 context,
-                                'assets/images/brawl.png',
-                                'Brawl Down',
-                                'Are You Ready to brawl?')),
+                                'assets/images/pes.jpg',
+                                'PES',
+                                'The pitch is Yours!')),
                         const Spacer(
                           flex: 1,
                         ),
@@ -587,7 +714,7 @@ class _HomePageState extends State<HomePage> {
                                 context,
                                 'assets/images/valorant.png',
                                 'Valorant',
-                                'Can you pass this one with Valour?')),
+                                'Rise to Radiant')),
                         const Spacer(
                           flex: 1,
                         ),
@@ -598,13 +725,27 @@ class _HomePageState extends State<HomePage> {
                                 context,
                                 'assets/images/pubg.png',
                                 'PUBG',
-                                'can you survive this playground?')),
+                                'Have you had your chicken dinner?')),
                       ],
                     ),
                   ),
                 ],
               ),
             ),
+
+// Schedule
+
+            // SchedulePage(),
+
+            // Container(
+            //   child: MediaQuery.of(context).size.width <= 768.0
+            //       ? MobileView(height, width, schedule)
+            //       : DesktopView(
+            //           linearGradient, realColor, row, width, schedule),
+            // ),
+
+//  Prizes
+
             Container(
               color: const Color.fromRGBO(36, 37, 41, 1),
               child: Column(
@@ -801,64 +942,66 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: EdgeInsets.fromLTRB(
-                  //     screenWidth * 0.05,
-                  //     50,
-                  //     screenWidth * 0.05,
-                  //     screenWidth * 0.05,
-                  //   ),
-                  //   child: Container(
-                  //     width: MediaQuery.of(context).size.width,
-                  //     decoration: const BoxDecoration(
-                  //       borderRadius: BorderRadius.all(Radius.circular(30)),
-                  //       gradient: LinearGradient(
-                  //           begin: Alignment(-0.7, -1),
-                  //           end: Alignment(0, 0.7),
-                  //           colors: [
-                  //             Color.fromRGBO(184, 19, 225, 1),
-                  //             Color.fromRGBO(245, 44, 153, 1)
-                  //           ]),
-                  //     ),
-                  //     padding: const EdgeInsets.symmetric(
-                  //         horizontal: 30, vertical: 30),
-                  //     child: Column(
-                  //       children: const [
-                  //         Text(
-                  //           'Participation Perks',
-                  //           textAlign: TextAlign.center,
-                  //           style: TextStyle(
-                  //             color: Color.fromRGBO(255, 255, 255, 1),
-                  //             fontFamily: 'Poppins',
-                  //             fontSize: 40,
-                  //             letterSpacing: 0,
-                  //             fontWeight: FontWeight.w700,
-                  //             decoration: TextDecoration.none,
-                  //             height: 1.5,
-                  //           ),
-                  //         ),
-                  //         SizedBox(height: 25),
-                  //         Text(
-                  //           '30-days trial version of any JetBrains IDE\nJet-Brains gratuitous 1-year All Products Pack subscriptions worth 649\$\nComplimentary SashiDo Student Credits\nSashiDo internship offers for selected students\nSashiDo complimentary 45 days Trial\nUnlimited Taskade Membership \$60/month\nVoiceflow Professional License worth 49\$/month\nInterview Cake complimentary course access worth \$149\nechoAR free resource offering',
-                  //           textAlign: TextAlign.center,
-                  //           style: TextStyle(
-                  //             color: Color.fromRGBO(255, 255, 255, 1),
-                  //             fontFamily: 'Poppins',
-                  //             fontSize: 20,
-                  //             letterSpacing: 0,
-                  //             fontWeight: FontWeight.w300,
-                  //             decoration: TextDecoration.none,
-                  //             height: 1.5,
-                  //           ),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  // ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      screenWidth * 0.05,
+                      50,
+                      screenWidth * 0.05,
+                      screenWidth * 0.05,
+                    ),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        gradient: LinearGradient(
+                            begin: Alignment(-0.7, -1),
+                            end: Alignment(0, 0.7),
+                            colors: [
+                              Color.fromRGBO(184, 19, 225, 1),
+                              Color.fromRGBO(245, 44, 153, 1)
+                            ]),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 30),
+                      child: Column(
+                        children: const [
+                          Text(
+                            'Participation Perks',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 40,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w700,
+                              decoration: TextDecoration.none,
+                              height: 1.5,
+                            ),
+                          ),
+                          SizedBox(height: 25),
+                          Text(
+                            '30-days trial version of any JetBrains IDE\nJet-Brains gratuitous 1-year All Products Pack subscriptions worth 649\$\nComplimentary SashiDo Student Credits\nSashiDo internship offers for selected students\nSashiDo complimentary 45 days Trial\nUnlimited Taskade Membership \$60/month\nVoiceflow Professional License worth 49\$/month\nInterview Cake complimentary course access worth \$149\nechoAR free resource offering',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w300,
+                              decoration: TextDecoration.none,
+                              height: 1.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
             Container(
+              // width: MediaQuery.of(context).size.width,
+              // height: MediaQuery.of(context).size.height,
               color: const Color.fromRGBO(36, 37, 41, 1),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1060,7 +1203,7 @@ class _HomePageState extends State<HomePage> {
                                 maxLines: 7,
                                 style: TextStyle(color: Colors.white),
                                 decoration: InputDecoration(
-                                  hintText: 'Write something then..',
+                                  hintText: '  Write something then..',
                                   hintStyle: TextStyle(
                                     fontSize: 15.0,
                                     color: Color(0xff898989),
@@ -1096,7 +1239,7 @@ class _HomePageState extends State<HomePage> {
                                 maxLines: 4,
                                 style: TextStyle(color: Colors.white),
                                 decoration: InputDecoration(
-                                  hintText: 'someone@xyz.com',
+                                  hintText: '  someone@xyz.com',
                                   hintStyle: TextStyle(
                                     fontSize: 15.0,
                                     color: Color(0xff898989),
@@ -1135,7 +1278,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   onPressed: () => {},
-                                  child: const Text('Submit')),
+                                  child: const Text(' Submit ')),
                             ),
                             const SizedBox(
                               height: 30,
@@ -1157,17 +1300,108 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    color: Color(0xff242529),
-                    width: double.infinity,
-                    height: screenHeight * 0.175,
-                    margin:
-                        new EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                    child: Column(
-                      children: [
-                        Row(),
-                        Row(),
-                        Row(),
-                      ],
+                    color: const Color.fromRGBO(36, 37, 41, 1),
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                              width: 150,
+                              height: 150,
+                              child: Image.asset(
+                                'assets/images/ChristLogo.png',
+                                fit: BoxFit.cover,
+                              )),
+                          Container(
+                            width: screenWidth * 0.09,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  //Made with ♥ CODe 2021
+                                  //Made with Flutter
+                                  children: const [
+                                    CircleAvatar(
+                                      radius: 10.0,
+                                      backgroundImage:
+                                          AssetImage('assets/images/fb.png'),
+                                      backgroundColor: Colors.transparent,
+                                    ),
+                                    CircleAvatar(
+                                      radius: 10.0,
+                                      backgroundImage: AssetImage(
+                                          'assets/images/twitter.png'),
+                                      backgroundColor: Colors.transparent,
+                                    ),
+                                    CircleAvatar(
+                                      radius: 10.0,
+                                      backgroundImage: AssetImage(
+                                          'assets/images/linkedin.png'),
+                                      backgroundColor: Colors.transparent,
+                                    ),
+                                    CircleAvatar(
+                                      radius: 10.0,
+                                      backgroundImage:
+                                          AssetImage('assets/images/insta.png'),
+                                      backgroundColor: Colors.transparent,
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Container(
+                                  child: Center(
+                                    child: Text(
+                                      "  Made with 🤍 CODe 2021\n",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Poppins',
+                                          fontSize: 10),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const [
+                                      CircleAvatar(
+                                        radius: 7.0,
+                                        backgroundImage: AssetImage(
+                                            'assets/images/flutter.png'),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                      Text(
+                                        " Made using Flutter",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Poppins',
+                                            fontSize: 10),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                              width: 200,
+                              height: 100,
+                              child: Image.asset(
+                                'assets/images/LOGO_BH_LIGHT.png',
+                                fit: BoxFit.cover,
+                                width: 200,
+                                height: 100,
+                              )),
+                        ],
+                      ),
                     ),
                   )
                 ],
