@@ -1,3 +1,5 @@
+import 'package:beach_hack_website/HomePage.dart';
+import 'package:beach_hack_website/main.dart';
 import 'package:flutter/material.dart';
 
 Map<String, bool> navItems = {
@@ -82,6 +84,12 @@ class _NavBarItemState extends State<NavBarItem> {
           navItems.update(widget.itemText, (value) => true);
           print(navItems);
           widget.update();
+
+          if (navItems['Schedule'] == true) {
+            // Scrollable.ensureVisible(context);
+          } else if (navItems['Events'] == true) {
+            // Scrollable.ensureVisible(scheduleKey.currentContext);
+          }
         },
         child: Container(
           // margin: const EdgeInsets.symmetric(horizontal: 8),

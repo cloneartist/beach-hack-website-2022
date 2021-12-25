@@ -64,18 +64,12 @@ class SchedulePage extends StatelessWidget {
         // Color(0xff577ABC).opacity(0.6)
       ],
     ).createShader(Rect.fromLTWH(0.0, 0.0, 40.0, 50.0));
-    return Scaffold(
-      backgroundColor: Color(0xff000000),
-      // appBar: ,
-      body: SingleChildScrollView(
-        child: Container(
-          // height: height * 1.5,
-          // color: Color(0xFFE5E5E5),
-          child: MediaQuery.of(context).size.width <= 768.0
-              ? MobileView(height, width, schedule)
-              : DesktopView(linearGradient, realColor, row, width, schedule),
-        ),
-      ),
+    return Container(
+      // height: height * 1.5,
+      // color: Color(0xFFE5E5E5),
+      child: MediaQuery.of(context).size.width <= 768.0
+          ? MobileView(height, width, schedule)
+          : DesktopView(linearGradient, realColor, row, width, schedule),
     );
   }
 
