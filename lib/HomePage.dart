@@ -3,9 +3,9 @@
 // import 'dart:js';
 
 // import 'package:auto_size_text/auto_size_text.dart';
-// import 'package:beach_hack_website/GradientText.dart';
-// import 'package:beach_hack_website/navbar.dart';
+// import 'package:beach_hack_website/constants/GradientText.dart';
 // import 'package:beach_hack_website/pages/schedule.dart';
+// import 'package:beach_hack_website/routes/navbar.dart';
 // import 'package:flutter/material.dart';
 // import 'package:lottie/lottie.dart';
 // import 'package:timelines/timelines.dart';
@@ -1594,7 +1594,6 @@
 // const gradient2nd = LinearGradient(
 //   colors: [Color.fromRGBO(57, 71, 196, 1), Color.fromRGBO(168, 175, 245, 1)],
 // );
-
 // const gradient1st = LinearGradient(
 //   colors: [Color.fromRGBO(147, 117, 8, 1), Color.fromRGBO(254, 252, 0, 1)],
 // );
