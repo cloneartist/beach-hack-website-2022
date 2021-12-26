@@ -9,98 +9,113 @@ class Footer extends StatelessWidget {
     var screenHeight = MediaQuery.of(context).size.height;
     return Container(
       color: const Color.fromRGBO(36, 37, 41, 1),
+      padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
       width: screenWidth,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-              width: 150,
-              height: 150,
-              child: Image.asset(
-                'assets/images/ChristLogo.png',
-                fit: BoxFit.cover,
-              )),
-          Container(
-            width: screenWidth * 0.09,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //Made with ♥ CODe 2021
-                  //Made with Flutter
-                  children: const [
-                    CircleAvatar(
-                      radius: 10.0,
-                      backgroundImage: AssetImage('assets/images/fb.png'),
-                      backgroundColor: Colors.transparent,
-                    ),
-                    CircleAvatar(
-                      radius: 10.0,
-                      backgroundImage: AssetImage('assets/images/twitter.png'),
-                      backgroundColor: Colors.transparent,
-                    ),
-                    CircleAvatar(
-                      radius: 10.0,
-                      backgroundImage: AssetImage('assets/images/linkedin.png'),
-                      backgroundColor: Colors.transparent,
-                    ),
-                    CircleAvatar(
-                      radius: 10.0,
-                      backgroundImage: AssetImage('assets/images/insta.png'),
-                      backgroundColor: Colors.transparent,
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  child: Center(
-                    child: Text(
-                      "  Made with 🤍 CODe 2021\n",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Poppins',
-                          fontSize: 10),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  child: Row(
+          Flexible(
+            flex: 1,
+            child: Container(
+                child: Image.asset(
+              'assets/images/ChristLogo.png',
+              fit: BoxFit.cover,
+            )),
+          ),
+          Flexible(
+            flex: 5,
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    //Made with ♥ CODe 2021
+                    //Made with Flutter
                     children: const [
                       CircleAvatar(
-                        radius: 7.0,
-                        backgroundImage:
-                            AssetImage('assets/images/flutter.png'),
+                        radius: 12.0,
+                        backgroundImage: AssetImage('assets/images/fb.png'),
                         backgroundColor: Colors.transparent,
                       ),
-                      Text(
-                        " Made using Flutter",
+                      SizedBox(
+                        width: 10,
+                      ),
+                      CircleAvatar(
+                        radius: 12.0,
+                        backgroundImage:
+                            AssetImage('assets/images/twitter.png'),
+                        backgroundColor: Colors.transparent,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      CircleAvatar(
+                        radius: 12.0,
+                        backgroundImage:
+                            AssetImage('assets/images/linkedin.png'),
+                        backgroundColor: Colors.transparent,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      CircleAvatar(
+                        radius: 12.0,
+                        backgroundImage: AssetImage('assets/images/insta.png'),
+                        backgroundColor: Colors.transparent,
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Container(
+                    child: Center(
+                      child: Text(
+                        "  Made with 🤍 CODe 2021\n",
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Poppins',
                             fontSize: 10),
-                      )
-                    ],
+                      ),
+                    ),
                   ),
-                )
-              ],
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        CircleAvatar(
+                          radius: 7.0,
+                          backgroundImage:
+                              AssetImage('assets/images/flutter.png'),
+                          backgroundColor: Colors.transparent,
+                        ),
+                        Text(
+                          " Made using Flutter",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Poppins',
+                              fontSize: 10),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
-          Container(
-              width: 200,
-              height: 100,
-              child: Image.asset(
-                'assets/images/LOGO_BH_LIGHT.png',
-                fit: BoxFit.cover,
-                width: 200,
-                height: 100,
-              )),
+          Flexible(
+            flex: 1,
+            child: Container(
+                child: Image.asset(
+              'assets/images/LOGO_BH_LIGHT.png',
+              fit: BoxFit.cover,
+            )),
+          ),
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:beach_hack_website/constants/GradientText.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -18,37 +19,42 @@ class Intro extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Wrap(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 1,
+            // Wrap(
+            //   // crossAxisAlignment: CrossAxisAlignment.start,
+            //   spacing: 1,
 
-              direction: Axis.vertical,
-              children: const [
-                GradientText(
-                  " BEACH HACK 4",
-                  gradient: gradientBlue,
-                  style: TextStyle(
-                      fontSize: 48,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700),
-                ),
-                GradientText(
-                  " THE LEGACY",
-                  gradient: gradientBlue,
-                  style: TextStyle(
-                      fontSize: 40,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700),
-                ),
-                GradientText(
-                  " CONTINUES",
-                  gradient: gradientBlue,
-                  style: TextStyle(
-                      fontSize: 34,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700),
-                ),
-              ],
+            //   direction: Axis.vertical,
+            //   children: const [
+            //     GradientText(
+            //       " BEACH HACK 4",
+            //       gradient: gradientBlue,
+            //       style: TextStyle(
+            //           fontSize: 48,
+            //           fontFamily: 'Poppins',
+            //           fontWeight: FontWeight.w700),
+            //     ),
+            //     GradientText(
+            //       " THE LEGACY",
+            //       gradient: gradientBlue,
+            //       style: TextStyle(
+            //           fontSize: 40,
+            //           fontFamily: 'Poppins',
+            //           fontWeight: FontWeight.w700),
+            //     ),
+            //     GradientText(
+            //       " CONTINUES",
+            //       gradient: gradientBlue,
+            //       style: TextStyle(
+            //           fontSize: 34,
+            //           fontFamily: 'Poppins',
+            //           fontWeight: FontWeight.w700),
+            //     ),
+            //   ],
+            // ),
+            Image.asset(
+              "assets/images/test.png",
+              width: screenWidth * 0.25,
+              fit: BoxFit.fitWidth,
             ),
             SizedBox(
               height: 30,
@@ -83,8 +89,9 @@ class Intro extends StatelessWidget {
                               SizedBox(
                                 height: 20,
                               ),
-                              Text(
+                              AutoSizeText(
                                 "Beach Hack 4 is the much anticipated fourth edition of Beach Hackathon, which seeks to become a vital networking arena where talent and opportunity collide. It creates a space for college students and provides them with a helping hand to think from a different perspective. Its main goal is to create software solutions for people with special needs in order to help them overcome their physical and mental limitations.",
+                                maxLines: 6,
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                     color: Color(0xff898989),
