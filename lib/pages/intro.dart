@@ -13,8 +13,8 @@ class Intro extends StatelessWidget {
     return Container(
       color: Colors.black,
       child: Padding(
-        padding: EdgeInsets.fromLTRB(
-            screenWidth * 0.05, screenHeight * 0.08, screenWidth * 0.05, 0),
+        padding: EdgeInsets.fromLTRB(screenWidth * 0.05, screenHeight * 0.08,
+            screenWidth * 0.05, screenHeight * 0.08),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -303,9 +303,6 @@ class Intro extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 60,
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart' show Lottie;
 
@@ -12,25 +13,23 @@ class PrizePage extends StatelessWidget {
     var screenHeight = MediaQuery.of(context).size.height;
     return Container(
       color: const Color.fromRGBO(36, 37, 41, 1),
+      padding: EdgeInsets.fromLTRB(screenWidth * 0.05, screenHeight * 0.08,
+          screenWidth * 0.05, screenHeight * 0.08),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.05, screenHeight * 0.08, screenWidth * 0.05, 0),
-            child: ShaderMask(
-              shaderCallback: (Rect bounds) {
-                return gradient.createShader(Offset.zero & bounds.size);
-              },
-              child: const Text(
-                'Prizes',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Poppins',
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.w700,
-                  decoration: TextDecoration.none,
-                ),
+          ShaderMask(
+            shaderCallback: (Rect bounds) {
+              return gradient.createShader(Offset.zero & bounds.size);
+            },
+            child: const Text(
+              'PRIZES',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Poppins',
+                fontSize: 40.0,
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.none,
               ),
             ),
           ),
@@ -51,6 +50,7 @@ class PrizePage extends StatelessWidget {
                       color: Color.fromRGBO(0, 0, 0, 1),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Lottie.network(
                           'https://assets10.lottiefiles.com/packages/lf20_3u6uxdsw.json',
@@ -77,17 +77,14 @@ class PrizePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          child: Text(
-                            "₹ 30,000",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40.0,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w700,
-                              decoration: TextDecoration.none,
-                            ),
+                        Text(
+                          "₹ 30,000",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 35.0,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.none,
                           ),
                         )
                       ],
@@ -104,12 +101,13 @@ class PrizePage extends StatelessWidget {
                       color: Color.fromRGBO(0, 0, 0, 1),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Lottie.network(
                           'https://assets2.lottiefiles.com/packages/lf20_rZQs81.json',
                           animate: true,
-                          width: screenWidth * 0.2,
-                          height: screenHeight * 0.2,
+                          width: screenWidth * 0.25,
+                          height: screenHeight * 0.25,
                           fit: BoxFit.contain,
                         ),
                         ShaderMask(
@@ -130,17 +128,14 @@ class PrizePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                          child: Text(
-                            "₹ 50,000",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40.0,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w700,
-                              decoration: TextDecoration.none,
-                            ),
+                        Text(
+                          "₹ 50,000",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40.0,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.none,
                           ),
                         )
                       ],
@@ -157,6 +152,7 @@ class PrizePage extends StatelessWidget {
                       color: Color.fromRGBO(0, 0, 0, 1),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Lottie.network(
                           'https://assets5.lottiefiles.com/packages/lf20_bei3yaim.json',
@@ -183,17 +179,14 @@ class PrizePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          child: Text(
-                            "₹ 20,000",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40.0,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w700,
-                              decoration: TextDecoration.none,
-                            ),
+                        Text(
+                          "₹ 20,000",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 35.0,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.none,
                           ),
                         )
                       ],
@@ -204,12 +197,8 @@ class PrizePage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(
-              screenWidth * 0.05,
-              50,
-              screenWidth * 0.05,
-              screenWidth * 0.05,
-            ),
+            padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
+                screenHeight * 0.08, screenWidth * 0.05, screenHeight * 0.08),
             child: Container(
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(

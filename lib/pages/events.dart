@@ -16,169 +16,164 @@ class _EventsState extends State<Events> {
     var cardHeight = screenHeight * 0.5;
     return Container(
       color: const Color.fromRGBO(36, 37, 41, 1),
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 60),
+      padding: EdgeInsets.fromLTRB(screenWidth * 0.05, screenHeight * 0.08,
+          screenWidth * 0.05, screenHeight * 0.08),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.05, screenHeight * 0.08, screenWidth * 0.05, 0),
-            child: ShaderMask(
-              shaderCallback: (Rect bounds) {
-                return gradient.createShader(Offset.zero & bounds.size);
-              },
-              child: const Text(
-                'EVENTS',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Poppins',
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.w700,
-                  decoration: TextDecoration.none,
-                ),
+          ShaderMask(
+            shaderCallback: (Rect bounds) {
+              return gradient.createShader(Offset.zero & bounds.size);
+            },
+            child: const Text(
+              'EVENTS',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Poppins',
+                fontSize: 40.0,
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.none,
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.05, screenHeight * 0.05, screenWidth * 0.05, 0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: screenWidth * 0.20,
-                  height: screenHeight * 0.50,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(30)),
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Color.fromRGBO(75, 180, 239, 1),
-                          Color.fromRGBO(91, 8, 120, 1)
-                        ]),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                    child: Center(
-                      child: Text(
-                        "Technical\nEvents",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30.0,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          decoration: TextDecoration.none,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: buildImageCard(
-                        context,
-                        'assets/images/codescreen.png',
-                        'Coding Competition',
-                        'Are you ready to turn caffeine to <Code/>?',
-                        'This Is What Awesome Looks Like')),
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: buildImageCard(
-                        context,
-                        'assets/images/htmlscreen.png',
-                        'Web Development',
-                        '''We heard you want to be a Web developer/Turn ideas into websites''',
-                        'You are CSS to my HTML, Hop in!')),
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: buildImageCard(
-                        context,
-                        'assets/images/iphonescreen.png',
-                        'App Development',
-                        'Feeling cold? Turn on Android Studio!',
-                        'Let\'s cook something hot!')),
-              ],
-            ),
+          SizedBox(
+            height: 30,
           ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                screenWidth * 0.05, screenHeight * 0.05, screenWidth * 0.05, 0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: screenWidth * 0.20,
-                  height: screenHeight * 0.50,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(30)),
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Color.fromRGBO(75, 180, 239, 1),
-                          Color.fromRGBO(91, 8, 120, 1)
-                        ]),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                    child: Center(
-                      child: Text(
-                        "Gaming\nEvents",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30.0,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          decoration: TextDecoration.none,
-                        ),
-                        textAlign: TextAlign.center,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                width: screenWidth * 0.20,
+                height: screenHeight * 0.50,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color.fromRGBO(75, 180, 239, 1),
+                        Color.fromRGBO(91, 8, 120, 1)
+                      ]),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                  child: Center(
+                    child: Text(
+                      "Technical\nEvents",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        decoration: TextDecoration.none,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
-                const Spacer(
-                  flex: 1,
+              ),
+              const Spacer(
+                flex: 1,
+              ),
+              SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: buildImageCard(
+                      context,
+                      'assets/images/codescreen.png',
+                      'Coding Competition',
+                      'Are you ready to turn caffeine to <Code/>?',
+                      'This Is What Awesome Looks Like')),
+              const Spacer(
+                flex: 1,
+              ),
+              SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: buildImageCard(
+                      context,
+                      'assets/images/htmlscreen.png',
+                      'Web Development',
+                      '''We heard you want to be a Web developer/Turn ideas into websites''',
+                      'You are CSS to my HTML, Hop in!')),
+              const Spacer(
+                flex: 1,
+              ),
+              SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: buildImageCard(
+                      context,
+                      'assets/images/iphonescreen.png',
+                      'App Development',
+                      'Feeling cold? Turn on Android Studio!',
+                      'Let\'s cook something hot!')),
+            ],
+          ),
+          SizedBox(
+            height: screenHeight * 0.08,
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                width: screenWidth * 0.20,
+                height: screenHeight * 0.50,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color.fromRGBO(75, 180, 239, 1),
+                        Color.fromRGBO(91, 8, 120, 1)
+                      ]),
                 ),
-                SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: buildGameCard(context, 'assets/images/pes.jpg',
-                        'PES', 'The pitch is Yours!')),
-                const Spacer(
-                  flex: 1,
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                  child: Center(
+                    child: Text(
+                      "Gaming\nEvents",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        decoration: TextDecoration.none,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ),
-                SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: buildGameCard(context, 'assets/images/valorant.png',
-                        'Valorant', 'Rise to Radiant')),
-                const Spacer(
-                  flex: 1,
-                ),
-                SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: buildGameCard(context, 'assets/images/pubg.png',
-                        'PUBG', 'Have you had your chicken dinner?')),
-              ],
-            ),
+              ),
+              const Spacer(
+                flex: 1,
+              ),
+              SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: buildGameCard(context, 'assets/images/pes.jpg', 'PES',
+                      'The pitch is Yours!')),
+              const Spacer(
+                flex: 1,
+              ),
+              SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: buildGameCard(context, 'assets/images/valorant.png',
+                      'Valorant', 'Rise to Radiant')),
+              const Spacer(
+                flex: 1,
+              ),
+              SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: buildGameCard(context, 'assets/images/pubg.png',
+                      'PUBG', 'Have you had your chicken dinner?')),
+            ],
           ),
         ],
       ),

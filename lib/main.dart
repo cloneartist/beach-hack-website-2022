@@ -2,8 +2,6 @@ import 'package:beach_hack_website/Home.dart';
 import 'package:beach_hack_website/HomePage.dart';
 import 'package:flutter/material.dart';
 
-final scheduleKey = GlobalKey();
-
 void main() {
   runApp(const MyApp());
 }
