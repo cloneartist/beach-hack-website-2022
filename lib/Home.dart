@@ -1,3 +1,4 @@
+import 'package:beach_hack_website/MobilePage.dart';
 import 'package:beach_hack_website/pages/Footer.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -22,18 +23,20 @@ class _HomeState extends State<Home> {
     return Material(
       color: Colors.black,
       child: SingleChildScrollView(
-        child: Column(
-          children: const [
-            LandingPage(),
-            Intro(),
-            Events(),
-            PrizePage(),
-            // SchedulePage(),
-            AboutUs(),
-            ContactPage(),
-            Footer(),
-          ],
-        ),
+        child: MediaQuery.of(context).size.width <= 500
+            ? MobileView()
+            : Column(
+                children: const [
+                  LandingPage(),
+                  Intro(),
+                  Events(),
+                  PrizePage(),
+                  // SchedulePage(),
+                  AboutUs(),
+                  ContactPage(),
+                  Footer(),
+                ],
+              ),
       ),
     );
   }

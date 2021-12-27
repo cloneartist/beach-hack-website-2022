@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MediaQuery.of(context).size.width <= 500 ? MobileView() : Home(),
+      home: Home(),
     );
   }
 }
