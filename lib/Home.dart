@@ -1,4 +1,5 @@
 import 'package:beach_hack_website/pages/Footer.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/AboutUs.dart';
