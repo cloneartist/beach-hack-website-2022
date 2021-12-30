@@ -14,5 +14,5 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           baseHref: /beach-hack-website-2022/
-          webRenderer: canvaskit
+          webRenderer: auto
 
