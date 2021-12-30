@@ -5,6 +5,7 @@ import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MobileView extends StatefulWidget {
   const MobileView({Key? key}) : super(key: key);
@@ -26,10 +27,31 @@ class _MobileViewState extends State<MobileView> {
     "Feeling cold? Turn on Android Studio!"
   ];
   var techContent = [
-    "This Is What Awesome Looks Like",
-    "You are CSS to my HTML, Hop in!",
+    "This is what AWESOME\nlooks like",
+    "You are CSS to my HTML\nHop in!",
     "Let\'s cook something hot!"
   ];
+
+  //Gaming
+
+  var gamingImages = [
+    "assets/images/pes.jpg",
+    "assets/images/valorant.png",
+    "assets/images/pubg.png"
+  ];
+  var gamingTitle = ["PES", "Valorant", "PUBG"];
+  var gamingContent = [
+    "The pitch is Yours!",
+    "Rise to Radiant",
+    "Have you had your\nCHICKEN DINNER?"
+  ];
+  var gamingSubtitle = [
+    "PES\nTOURNAMENT",
+    "VALORANT\nTOURNAMENT",
+    "PUBG\nTOURNAMENT"
+  ];
+  //
+
   TextStyle styleOfDrawerText = const TextStyle(
     color: Colors.white,
     fontFamily: "Poppins",
@@ -592,87 +614,50 @@ class _MobileViewState extends State<MobileView> {
                     screenWidth * 0.05,
                     screenHeight * 0.08),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      width: screenWidth,
-                      height: screenWidth * 0.25,
-                      decoration: BoxDecoration(
-                        gradient: gradientPurple1,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Center(
-                          child: Text(
-                        "Technical Events",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      )),
-                    ),
                     // Container(
-                    //   color: Colors.black,
-                    //   child: Row(
-                    //     children: [
-                    //       Flexible(
-                    //         flex: 3,
-                    //         child: Image.asset(
-                    //           "assets/images/codescreen.png",
-                    //           fit: BoxFit.fitHeight,
-                    //           height: screenWidth * 0.5,
-                    //           width: screenWidth,
-                    //         ),
-                    //       ),
-                    //       Flexible(
-                    //         flex: 4,
-                    //         child: Padding(
-                    //           padding: const EdgeInsets.all(12.0),
-                    //           child: Column(
-                    //             children: [
-                    //               AutoSizeText(
-                    //                 "Coding Competition",
-                    //                 textAlign: TextAlign.center,
-                    //                 maxLines: 1,
-                    //                 style: a1,
-                    //               ),
-                    //               SizedBox(
-                    //                 height: 10,
-                    //               ),
-                    //               AutoSizeText(
-                    //                 "Are you ready to turn caffeine to <Code/>?",
-                    //                 style: a3,
-                    //                 textAlign: TextAlign.center,
-                    //                 maxLines: 2,
-                    //               ),
-                    //               SizedBox(
-                    //                 height: 5,
-                    //               ),
-                    //               AutoSizeText(
-                    //                 "This Is What Awesome Looks Like",
-                    //                 textAlign: TextAlign.center,
-                    //                 style: a4,
-                    //                 maxLines: 2,
-                    //               ),
-                    //               ElevatedButton(
-                    //                 onPressed: () {},
-                    //                 child: Text("Stay Tuned!"),
-                    //               ),
-                    //             ],
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ],
+                    //   width: screenWidth,
+                    //   height: screenWidth * 0.25,
+                    //   decoration: BoxDecoration(
+                    //     gradient: gradientPurple1,
+                    //     borderRadius: BorderRadius.circular(20),
                     //   ),
+                    //   child: Center(
+                    //       child: Text(
+                    //     "Technical Events",
+                    //     style: TextStyle(
+                    //       fontSize: 20,
+                    //       fontFamily: "Poppins",
+                    //       fontWeight: FontWeight.bold,
+                    //       color: Colors.white,
+                    //     ),
+                    //   )),
                     // ),
-
+                    Text(
+                      "Technical Events",
+                      // gradient: gradientBlue,
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     CarouselSlider.builder(
                       itemCount: 3,
                       itemBuilder: (BuildContext context, int itemIndex,
                               int pageViewIndex) =>
                           Container(
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(20)),
                         width: cardWidth,
                         child: buildImageCard(
+                            false,
+                            itemIndex,
                             context,
                             techImages[itemIndex],
                             techTitle[itemIndex],
@@ -680,19 +665,82 @@ class _MobileViewState extends State<MobileView> {
                             techContent[itemIndex]),
                       ),
                       options: CarouselOptions(
-                          // height: cardHeight,
-                          enlargeCenterPage: true,
-                          viewportFraction: 0.8,
-                          scrollDirection: Axis.horizontal,
-                          autoPlayAnimationDuration: const Duration(seconds: 1),
-                          autoPlayInterval: Duration(seconds: 3),
-                          autoPlay: true,
-                          aspectRatio: 1 / 1.2),
-                    )
+                        // height: screenWidth * 0.95,
+                        aspectRatio: 1.0,
+                        enlargeCenterPage: true,
+                        viewportFraction: 0.8,
+                        scrollDirection: Axis.horizontal,
+                        autoPlayAnimationDuration: const Duration(seconds: 1),
+                        autoPlayInterval: Duration(seconds: 3),
+                        autoPlay: true,
+                      ),
+                    ),
+                    // Container(
+                    //   width: screenWidth,
+                    //   height: screenWidth * 0.25,
+                    //   decoration: BoxDecoration(
+                    //     gradient: gradientPurple1,
+                    //     borderRadius: BorderRadius.circular(20),
+                    //   ),
+                    //   child: Center(
+                    //       child: Text(
+                    //     "Gaming Events",
+                    //     style: TextStyle(
+                    //       fontSize: 20,
+                    //       fontFamily: "Poppins",
+                    //       fontWeight: FontWeight.bold,
+                    //       color: Colors.white,
+                    //     ),
+                    //   )),
+                    // ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Gaming Events",
+                      // gradient: gradientBlue,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Poppins',
+                          fontSize: 30,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    CarouselSlider.builder(
+                      itemCount: 3,
+                      itemBuilder: (BuildContext context, int itemIndex,
+                              int pageViewIndex) =>
+                          Container(
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(20)),
+                        width: cardWidth,
+                        child: buildImageCard(
+                            true,
+                            itemIndex,
+                            context,
+                            gamingImages[itemIndex],
+                            gamingTitle[itemIndex],
+                            gamingSubtitle[itemIndex],
+                            gamingContent[itemIndex]),
+                      ),
+                      options: CarouselOptions(
+                        // height: screenWidth * 0.95,
+                        aspectRatio: 1.0,
+                        enlargeCenterPage: true,
+                        viewportFraction: 0.8,
+                        scrollDirection: Axis.horizontal,
+                        autoPlayAnimationDuration: const Duration(seconds: 1),
+                        autoPlayInterval: Duration(seconds: 3),
+                        autoPlay: true,
+                      ),
+                    ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -767,102 +815,133 @@ TextStyle a4 = TextStyle(
   fontWeight: FontWeight.w300,
 );
 
-Widget buildImageCard(BuildContext context, image, title, subtitle, content) {
+Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
+    title, subtitle, content) {
   var screenWidth = MediaQuery.of(context).size.width;
-  return Card(
-    color: Colors.black,
-    clipBehavior: Clip.hardEdge,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-    child: Column(
-      children: [
-        Stack(
-          children: [
-            Ink.image(
-              image: AssetImage(image),
-              height: 150,
-              child: const InkWell(
-                focusColor: Colors.amber,
-              ),
+  List<bool> techFinished = [false, true, true];
+  List<bool> gameFinished = [false, false, false];
+  List<bool> Finished;
+  isGame ? Finished = gameFinished : Finished = techFinished;
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      ClipRRect(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(20),
+          topLeft: Radius.circular(20),
+        ),
+        child: Container(
+          width: screenWidth,
+          height: 150,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              alignment: Alignment.topCenter,
               fit: BoxFit.cover,
+              image: AssetImage(image),
             ),
-            Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                // width: screenWidth * 0.12,
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(99, 199, 255, 0.5),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 15, 10),
-                  child: AutoSizeText(
-                    title,
-                    maxLines: 1,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontFamily: 'Poppins',
+          ),
+          child: isGame
+              ? SizedBox()
+              : Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    // width: screenWidth * 0.12,
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(99, 199, 255, 0.5),
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(40),
+                          topRight: Radius.circular(20)),
                     ),
-                    textAlign: TextAlign.center,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 15, 10),
+                      child: AutoSizeText(
+                        title,
+                        maxLines: 1,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-          ],
         ),
-        const SizedBox(
-          height: 8,
+      ),
+      Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: AutoSizeText(
+          subtitle,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          style: const TextStyle(
+              fontSize: 16, color: Colors.white, fontFamily: 'Poppins'),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: AutoSizeText(
-            subtitle,
-            textAlign: TextAlign.center,
-            maxLines: 2,
-            style: const TextStyle(
-                fontSize: 16, color: Colors.white, fontFamily: 'Poppins'),
-          ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: AutoSizeText(
+          content,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+              fontSize: 11, color: Colors.grey, fontFamily: 'Poppins'),
         ),
-        const SizedBox(
-          height: 10,
+      ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+        child: Container(
+          width: screenWidth,
+          height: 30,
+          child: Finished[itemIndex]
+              ? ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  onPressed: () {
+                    switch (itemIndex) {
+                      case 0:
+                        break;
+                      case 1:
+                        // _launchURL();
+                        break;
+                      case 2:
+                        break;
+                      case 3:
+                        break;
+                    }
+                  },
+                  child: Text("Register"),
+                )
+              : ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.grey,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  onPressed: () {
+                    switch (itemIndex) {
+                      case 0:
+                        break;
+                      case 1:
+                        // _launchURL();
+                        break;
+                      case 2:
+                        break;
+                      case 3:
+                        break;
+                    }
+                  },
+                  child: Text(
+                    "Ended!",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            content,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-                fontSize: 12, color: Colors.white, fontFamily: 'Poppins'),
-          ),
-        ),
-        const Spacer(
-          flex: 2,
-        ),
-        ButtonBar(
-          alignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        const Color.fromRGBO(99, 199, 255, 1)),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                    ))),
-                onPressed: () {},
-                child: const Text(
-                  'Stay Tuned!',
-                  style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
-                ))
-          ],
-        ),
-        const SizedBox(
-          height: 10,
-        )
-      ],
-    ),
+      ),
+      SizedBox(
+        height: 10,
+      ),
+    ],
   );
 }

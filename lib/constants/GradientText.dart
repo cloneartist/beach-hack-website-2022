@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class GradientText extends StatelessWidget {
@@ -18,7 +19,11 @@ class GradientText extends StatelessWidget {
       shaderCallback: (bounds) => gradient.createShader(
         Rect.fromLTWH(0, 0, bounds.width, bounds.height),
       ),
-      child: Text(text, style: style),
+      child: AutoSizeText(
+        text,
+        style: style,
+        maxLines: 1,
+      ),
     );
   }
 }
