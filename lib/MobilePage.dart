@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:beach_hack_website/constants/GradientText.dart';
 import 'package:beach_hack_website/pages/landing_page.dart';
 import 'package:beach_hack_website/routes/navbar.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -13,6 +14,22 @@ class MobileView extends StatefulWidget {
 }
 
 class _MobileViewState extends State<MobileView> {
+  var techImages = [
+    "assets/images/codescreen.png",
+    "assets/images/htmlscreen.png",
+    "assets/images/iphonescreen.png"
+  ];
+  var techTitle = ["Coding Competition", "Web Development", "App Development"];
+  var techSubtitle = [
+    "Are you ready to turn caffeine to <Code/>?",
+    "If you think math is hard, try web design",
+    "Feeling cold? Turn on Android Studio!"
+  ];
+  var techContent = [
+    "This Is What Awesome Looks Like",
+    "You are CSS to my HTML, Hop in!",
+    "Let\'s cook something hot!"
+  ];
   TextStyle styleOfDrawerText = const TextStyle(
     color: Colors.white,
     fontFamily: "Poppins",
@@ -23,7 +40,8 @@ class _MobileViewState extends State<MobileView> {
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
     var screenHeight = MediaQuery.of(context).size.height;
-
+    var cardWidth = screenWidth;
+    var cardHeight = screenHeight * 0.5;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -510,7 +528,7 @@ class _MobileViewState extends State<MobileView> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
-                              "THEME : CHALLENGES OF SPECIALLY ABLED",
+                              "THEME\nCOMING SOON!",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Poppins',
@@ -519,7 +537,7 @@ class _MobileViewState extends State<MobileView> {
                               ),
                             ),
                             Text(
-                              "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 18th and 19th of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
+                              "",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Poppins',
@@ -539,10 +557,142 @@ class _MobileViewState extends State<MobileView> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xff242529),
+                      ),
+                      width: screenWidth,
+                      height: screenWidth * 0.25,
+                      child: Center(
+                          child: Text(
+                        "Moments",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )),
+                    ),
                   ],
                 ),
               ),
             ),
+            Container(
+              width: screenWidth,
+              color: Color(0xff242529),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(
+                    screenWidth * 0.05,
+                    screenHeight * 0.08,
+                    screenWidth * 0.05,
+                    screenHeight * 0.08),
+                child: Column(
+                  children: [
+                    Container(
+                      width: screenWidth,
+                      height: screenWidth * 0.25,
+                      decoration: BoxDecoration(
+                        gradient: gradientPurple1,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Center(
+                          child: Text(
+                        "Technical Events",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )),
+                    ),
+                    // Container(
+                    //   color: Colors.black,
+                    //   child: Row(
+                    //     children: [
+                    //       Flexible(
+                    //         flex: 3,
+                    //         child: Image.asset(
+                    //           "assets/images/codescreen.png",
+                    //           fit: BoxFit.fitHeight,
+                    //           height: screenWidth * 0.5,
+                    //           width: screenWidth,
+                    //         ),
+                    //       ),
+                    //       Flexible(
+                    //         flex: 4,
+                    //         child: Padding(
+                    //           padding: const EdgeInsets.all(12.0),
+                    //           child: Column(
+                    //             children: [
+                    //               AutoSizeText(
+                    //                 "Coding Competition",
+                    //                 textAlign: TextAlign.center,
+                    //                 maxLines: 1,
+                    //                 style: a1,
+                    //               ),
+                    //               SizedBox(
+                    //                 height: 10,
+                    //               ),
+                    //               AutoSizeText(
+                    //                 "Are you ready to turn caffeine to <Code/>?",
+                    //                 style: a3,
+                    //                 textAlign: TextAlign.center,
+                    //                 maxLines: 2,
+                    //               ),
+                    //               SizedBox(
+                    //                 height: 5,
+                    //               ),
+                    //               AutoSizeText(
+                    //                 "This Is What Awesome Looks Like",
+                    //                 textAlign: TextAlign.center,
+                    //                 style: a4,
+                    //                 maxLines: 2,
+                    //               ),
+                    //               ElevatedButton(
+                    //                 onPressed: () {},
+                    //                 child: Text("Stay Tuned!"),
+                    //               ),
+                    //             ],
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+
+                    CarouselSlider.builder(
+                      itemCount: 3,
+                      itemBuilder: (BuildContext context, int itemIndex,
+                              int pageViewIndex) =>
+                          Container(
+                        width: cardWidth,
+                        child: buildImageCard(
+                            context,
+                            techImages[itemIndex],
+                            techTitle[itemIndex],
+                            techSubtitle[itemIndex],
+                            techContent[itemIndex]),
+                      ),
+                      options: CarouselOptions(
+                          // height: cardHeight,
+                          enlargeCenterPage: true,
+                          viewportFraction: 0.8,
+                          scrollDirection: Axis.horizontal,
+                          autoPlayAnimationDuration: const Duration(seconds: 1),
+                          autoPlayInterval: Duration(seconds: 3),
+                          autoPlay: true,
+                          aspectRatio: 1 / 1.2),
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
@@ -582,6 +732,137 @@ const gradientPink = LinearGradient(
 const gradientPurple = LinearGradient(
   colors: [Color(0xffB068F8), Color(0xff3E00A4)],
 );
+const gradientPurple1 = LinearGradient(
+  colors: [Color(0xff4BB4EF), Color(0xff5B0878)],
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+);
+
 const gradientPurple2 = LinearGradient(
   colors: [Color(0xffB813E1), Color(0xffF52C99)],
 );
+
+TextStyle a1 = TextStyle(
+  color: Colors.white,
+  fontFamily: "Poppins",
+  fontSize: 20,
+  fontWeight: FontWeight.w700,
+);
+TextStyle a2 = TextStyle(
+  color: Colors.white,
+  fontFamily: "Poppins",
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+);
+TextStyle a3 = TextStyle(
+  color: Colors.white,
+  fontFamily: "Poppins",
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+);
+TextStyle a4 = TextStyle(
+  color: Colors.white,
+  fontFamily: "Poppins",
+  fontSize: 12,
+  fontWeight: FontWeight.w300,
+);
+
+Widget buildImageCard(BuildContext context, image, title, subtitle, content) {
+  var screenWidth = MediaQuery.of(context).size.width;
+  return Card(
+    color: Colors.black,
+    clipBehavior: Clip.hardEdge,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+    child: Column(
+      children: [
+        Stack(
+          children: [
+            Ink.image(
+              image: AssetImage(image),
+              height: 150,
+              child: const InkWell(
+                focusColor: Colors.amber,
+              ),
+              fit: BoxFit.cover,
+            ),
+            Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                // width: screenWidth * 0.12,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(99, 199, 255, 0.5),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 10, 15, 10),
+                  child: AutoSizeText(
+                    title,
+                    maxLines: 1,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Poppins',
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: AutoSizeText(
+            subtitle,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            style: const TextStyle(
+                fontSize: 16, color: Colors.white, fontFamily: 'Poppins'),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            content,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                fontSize: 12, color: Colors.white, fontFamily: 'Poppins'),
+          ),
+        ),
+        const Spacer(
+          flex: 2,
+        ),
+        ButtonBar(
+          alignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(99, 199, 255, 1)),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                    ))),
+                onPressed: () {},
+                child: const Text(
+                  'Stay Tuned!',
+                  style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
+                ))
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        )
+      ],
+    ),
+  );
+}
