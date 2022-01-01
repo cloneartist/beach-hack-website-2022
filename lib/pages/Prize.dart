@@ -2,7 +2,8 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart' show Lottie;
+import 'package:lottie/lottie.dart'
+    show Lottie, LottieBuilder, LottieOptions, NetworkLottie;
 
 class PrizePage extends StatelessWidget {
   const PrizePage({Key? key}) : super(key: key);
@@ -100,9 +101,16 @@ class PrizePage extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                       color: Color.fromRGBO(0, 0, 0, 1),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    child: Stack(
+                      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        // Positioned.fill(
+                        //     child: LottieBuilder(
+                        //   repeat: true,
+                        //   lottie: NetworkLottie(
+                        //     "https://assets3.lottiefiles.com/packages/lf20_obhph3sh.json",
+                        //   ),
+                        // )),
                         Lottie.network(
                           'https://assets2.lottiefiles.com/packages/lf20_rZQs81.json',
                           animate: true,
@@ -115,7 +123,8 @@ class PrizePage extends StatelessWidget {
                             return gradient1st
                                 .createShader(Offset.zero & bounds.size);
                           },
-                          child: const Center(
+                          child: Align(
+                            alignment: Alignment(0, 0.2),
                             child: Text(
                               '1st',
                               style: TextStyle(
@@ -128,14 +137,17 @@ class PrizePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Text(
-                          "₹ 50,000",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40.0,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            decoration: TextDecoration.none,
+                        Align(
+                          alignment: Alignment(0, 0.75),
+                          child: Text(
+                            "₹ 50,000",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40.0,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w700,
+                              decoration: TextDecoration.none,
+                            ),
                           ),
                         )
                       ],

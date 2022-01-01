@@ -5,6 +5,7 @@ import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:transparent_image/transparent_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MobileView extends StatefulWidget {
@@ -50,7 +51,19 @@ class _MobileViewState extends State<MobileView> {
     "VALORANT\nTOURNAMENT",
     "PUBG\nTOURNAMENT"
   ];
-  //
+
+  //urlOfMoments
+
+  var urlOfMoments = [
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/6.jpeg?alt=media&token=c9e1747b-35dd-451e-ab56-f6f4a44f9071",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/3.jpeg?alt=media&token=1467c052-41e1-4d15-a155-e1576d1393ae",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/1.jpeg?alt=media&token=b12e4d9a-d2b1-4fc4-a226-03a5208778c7",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/2.jpeg?alt=media&token=124c7464-1296-48c4-be32-1c1eeaa3baa9",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/4.jpeg?alt=media&token=b361e571-3de6-4b35-8692-bc9d8d17d8e8",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/5.jpeg?alt=media&token=a8811b9d-6280-4d64-bcdd-6a76b9dc1245",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/7.jpeg?alt=media&token=811ceee6-a709-4871-a1e1-9afa93aae47c",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/8.jpeg?alt=media&token=510b60d8-c8a2-4dd0-96db-36ed01fc3adb"
+  ];
 
   TextStyle styleOfDrawerText = const TextStyle(
     color: Colors.white,
@@ -600,6 +613,26 @@ class _MobileViewState extends State<MobileView> {
                         ),
                       )),
                     ),
+
+                    CarouselSlider.builder(
+                      itemCount: 8,
+                      itemBuilder: (BuildContext context, int itemIndex,
+                              int pageViewIndex) =>
+                          FadeInImage.memoryNetwork(
+                        placeholder: kTransparentImage,
+                        image: urlOfMoments[itemIndex],
+                      ),
+                      options: CarouselOptions(
+                        // height: screenWidth * 0.95,
+                        aspectRatio: 1.0,
+                        enlargeCenterPage: true,
+                        viewportFraction: 0.8,
+                        scrollDirection: Axis.horizontal,
+                        autoPlayAnimationDuration: const Duration(seconds: 1),
+                        autoPlayInterval: Duration(seconds: 3),
+                        autoPlay: true,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -741,6 +774,95 @@ class _MobileViewState extends State<MobileView> {
                 ),
               ),
             ),
+            Container(
+                color: Colors.black,
+                width: screenWidth,
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/gold.png',
+                      width: 150,
+                      height: 150,
+                      fit: BoxFit.contain,
+                    ),
+                    Text(
+                      '1st',
+                      style: TextStyle(
+                        color: Colors.yellow,
+                        fontSize: 35.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w900,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                    Text(
+                      "₹ 50,000",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Image.asset(
+                      'assets/images/blue.png',
+                      width: 135,
+                      height: 135,
+                      fit: BoxFit.contain,
+                    ),
+                    Text(
+                      '2nd',
+                      style: TextStyle(
+                        color: Color.fromRGBO(57, 71, 196, 1),
+                        fontSize: 35.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w900,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                    Text(
+                      "₹ 30,000",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Image.asset(
+                      'assets/images/brown.png',
+                      width: 120,
+                      height: 120,
+                      fit: BoxFit.contain,
+                    ),
+                    const Center(
+                      child: Text(
+                        '3rd',
+                        style: TextStyle(
+                          color: Color.fromRGBO(248, 93, 37, 1),
+                          fontSize: 35.0,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w900,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "₹ 20,000",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        decoration: TextDecoration.none,
+                      ),
+                    )
+                  ],
+                ))
           ],
         ),
       ),
