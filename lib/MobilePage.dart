@@ -65,6 +65,18 @@ class _MobileViewState extends State<MobileView> {
     "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/8.jpeg?alt=media&token=510b60d8-c8a2-4dd0-96db-36ed01fc3adb"
   ];
 
+  var urlOfTechEvents = [
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/codescreen.png?alt=media&token=a8e9d652-0e92-4258-83cc-f5c26e55e530",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/htmlscreen.png?alt=media&token=92cab819-ab7f-4dd3-bb4c-be9a16e3834c",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/iphonescreen.png?alt=media&token=11e91ece-7b06-4e30-ad80-11468b88cc6b",
+  ];
+
+  var urlOfGameEvents = [
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/pes.jpg?alt=media&token=a235bf14-2101-4c7e-9f5f-06522b1069f7",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/valorant.png?alt=media&token=36f27eaa-8571-4915-a987-6b323184c931",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/pubg.png?alt=media&token=81d85699-498a-49bb-8598-90bf6d5c83c9",
+  ];
+
   var shadow = [
     Shadow(
       offset: Offset(5.0, 5.0),
@@ -180,13 +192,13 @@ class _MobileViewState extends State<MobileView> {
                 children: [
                   // const Align(alignment: Alignment.topCenter, child: NavBar()),
                   FadeInImage.assetNetwork(
-                      placeholder: "assets/images/matrix.gif",
+                      placeholder: "assets/images/bg_img_bg.jpeg",
                       placeholderFit: BoxFit.cover,
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       fit: BoxFit.cover,
                       image:
-                          "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/bg_img_original.jpg?alt=media&token=ee0db930-cfe9-48a2-9ff8-83edd136c3e3"),
+                          "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/bg_img_original.jpg?alt=media&token=bcd05f3d-6019-4fef-bb69-bba08a8a1706"),
                   Align(
                     alignment: Alignment.center,
                     child: Column(
@@ -723,7 +735,7 @@ class _MobileViewState extends State<MobileView> {
                             false,
                             itemIndex,
                             context,
-                            techImages[itemIndex],
+                            urlOfTechEvents[itemIndex],
                             techTitle[itemIndex],
                             techSubtitle[itemIndex],
                             techContent[itemIndex]),
@@ -785,7 +797,7 @@ class _MobileViewState extends State<MobileView> {
                             true,
                             itemIndex,
                             context,
-                            gamingImages[itemIndex],
+                            urlOfGameEvents[itemIndex],
                             gamingTitle[itemIndex],
                             gamingSubtitle[itemIndex],
                             gamingContent[itemIndex]),
@@ -830,7 +842,7 @@ class _MobileViewState extends State<MobileView> {
                       "₹ 50,000",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25.0,
+                        fontSize: 35.0,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700,
                         decoration: TextDecoration.none,
@@ -886,7 +898,7 @@ class _MobileViewState extends State<MobileView> {
                       "₹ 20,000",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25.0,
+                        fontSize: 20.0,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700,
                         decoration: TextDecoration.none,
@@ -990,7 +1002,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
             image: DecorationImage(
               alignment: Alignment.topCenter,
               fit: BoxFit.cover,
-              image: AssetImage(image),
+              image: NetworkImage(image),
             ),
           ),
           child: isGame
