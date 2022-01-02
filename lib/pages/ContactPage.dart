@@ -1,9 +1,17 @@
 // ignore_for_file: file_names
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatelessWidget {
-  const ContactPage({Key? key}) : super(key: key);
+  // const ContactPage({Key? key}) : super(key: key);
+
+  var _subject_controller = TextEditingController();
+
+  String _email_body = "";
+
+  String _email_subject = "Help";
+
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -55,9 +63,10 @@ class ContactPage extends StatelessWidget {
                   Container(
                     height: screenHeight * 0.15,
                     width: screenWidth * 0.45,
-                    child: const TextField(
+                    child: TextField(
                       minLines: 6,
                       maxLines: 7,
+                      controller: _subject_controller,
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         hintText: '  Write something then..',
@@ -113,27 +122,25 @@ class ContactPage extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  ButtonTheme(
-                    padding:
-                        EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
-                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    minWidth: 0,
-                    height: 0,
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xff0596FF),
+                    ),
+                    height: 30,
                     child: ElevatedButton(
-                        style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                              side: BorderSide(
-                                color: Color(0xff0596FF),
-                                width: 2.0,
-                              ),
-                            ),
-                          ),
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
                         ),
-                        onPressed: () => {},
-                        child: const Text(' Submit ')),
+                      ),
+                      onPressed: () {
+                        _email_body = _subject_controller.text;
+                        _sendEmail(
+                            "code@cce.edu.in", _email_subject, _email_body);
+                      },
+                      child: Text("Submit"),
+                    ),
                   ),
                 ],
               ),
@@ -153,6 +160,15 @@ class ContactPage extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+_sendEmail(String toMailId, String subject, String body) async {
+  var url = 'mailto:$toMailId?subject=$subject&body=$body';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 

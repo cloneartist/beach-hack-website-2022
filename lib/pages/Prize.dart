@@ -208,55 +208,55 @@ class PrizePage extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
-                screenHeight * 0.08, screenWidth * 0.05, screenHeight * 0.08),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                gradient: LinearGradient(
-                    begin: Alignment(-0.7, -1),
-                    end: Alignment(0, 0.7),
-                    colors: [
-                      Color.fromRGBO(184, 19, 225, 1),
-                      Color.fromRGBO(245, 44, 153, 1)
-                    ]),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-              child: Column(
-                children: const [
-                  Text(
-                    'Participation Perks',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                      fontFamily: 'Poppins',
-                      fontSize: 40,
-                      letterSpacing: 0,
-                      fontWeight: FontWeight.w700,
-                      decoration: TextDecoration.none,
-                      height: 1.5,
-                    ),
-                  ),
-                  SizedBox(height: 25),
-                  Text(
-                    '30-days trial version of any JetBrains IDE\nJet-Brains gratuitous 1-year All Products Pack subscriptions worth 649\$\nComplimentary SashiDo Student Credits\nSashiDo internship offers for selected students\nSashiDo complimentary 45 days Trial\nUnlimited Taskade Membership \$60/month\nVoiceflow Professional License worth 49\$/month\nInterview Cake complimentary course access worth \$149\nechoAR free resource offering',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                      fontFamily: 'Poppins',
-                      fontSize: 20,
-                      letterSpacing: 0,
-                      fontWeight: FontWeight.w300,
-                      decoration: TextDecoration.none,
-                      height: 1.5,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
+          //       screenHeight * 0.08, screenWidth * 0.05, screenHeight * 0.08),
+          //   child: Container(
+          //     width: MediaQuery.of(context).size.width,
+          //     decoration: const BoxDecoration(
+          //       borderRadius: BorderRadius.all(Radius.circular(30)),
+          //       gradient: LinearGradient(
+          //           begin: Alignment(-0.7, -1),
+          //           end: Alignment(0, 0.7),
+          //           colors: [
+          //             Color.fromRGBO(184, 19, 225, 1),
+          //             Color.fromRGBO(245, 44, 153, 1)
+          //           ]),
+          //     ),
+          //     padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+          //     child: Column(
+          //       children: const [
+          //         Text(
+          //           'Participation Perks',
+          //           textAlign: TextAlign.center,
+          //           style: TextStyle(
+          //             color: Color.fromRGBO(255, 255, 255, 1),
+          //             fontFamily: 'Poppins',
+          //             fontSize: 40,
+          //             letterSpacing: 0,
+          //             fontWeight: FontWeight.w700,
+          //             decoration: TextDecoration.none,
+          //             height: 1.5,
+          //           ),
+          //         ),
+          //         SizedBox(height: 25),
+          //         Text(
+          //           '30-days trial version of any JetBrains IDE\nJet-Brains gratuitous 1-year All Products Pack subscriptions worth 649\$\nComplimentary SashiDo Student Credits\nSashiDo internship offers for selected students\nSashiDo complimentary 45 days Trial\nUnlimited Taskade Membership \$60/month\nVoiceflow Professional License worth 49\$/month\nInterview Cake complimentary course access worth \$149\nechoAR free resource offering',
+          //           textAlign: TextAlign.center,
+          //           style: TextStyle(
+          //             color: Color.fromRGBO(255, 255, 255, 1),
+          //             fontFamily: 'Poppins',
+          //             fontSize: 20,
+          //             letterSpacing: 0,
+          //             fontWeight: FontWeight.w300,
+          //             decoration: TextDecoration.none,
+          //             height: 1.5,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

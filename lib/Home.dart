@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
                     const PrizePage(),
                     // SchedulePage(),
                     AboutUs(),
-                    const ContactPage(),
+                    ContactPage(),
                     Footer(),
                   ],
                 ),

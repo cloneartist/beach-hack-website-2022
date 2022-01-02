@@ -361,7 +361,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
         ),
       ),
       SizedBox(
-        height: 10,
+        height: 5,
       ),
     ],
   );
