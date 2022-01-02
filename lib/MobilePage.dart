@@ -65,6 +65,19 @@ class _MobileViewState extends State<MobileView> {
     "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/8.jpeg?alt=media&token=510b60d8-c8a2-4dd0-96db-36ed01fc3adb"
   ];
 
+  var shadow = [
+    Shadow(
+      offset: Offset(5.0, 5.0),
+      blurRadius: 5.0,
+      color: Color.fromARGB(255, 0, 0, 0),
+    ),
+    Shadow(
+      offset: Offset(5.0, 5.0),
+      blurRadius: 8.0,
+      color: Color.fromARGB(125, 0, 0, 255),
+    ),
+  ];
+
   TextStyle styleOfDrawerText = const TextStyle(
     color: Colors.white,
     fontFamily: "Poppins",
@@ -151,20 +164,35 @@ class _MobileViewState extends State<MobileView> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/bg_img_bg.jpeg'),
-                    fit: BoxFit.cover),
-              ),
+              // decoration: const BoxDecoration(
+              //   image: DecorationImage(
+              //     // image: FadeInImage.assetNetwork(
+              //     //     placeholder: kTransparentImage, image: "image"),
+              //     image: NetworkImage(
+              //         'https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/bg_img_original.jpg?alt=media&token=ee0db930-cfe9-48a2-9ff8-83edd136c3e3'),
+
+              //     // image: FadeInImage(placeholder: kTransparentImage, image: "image")
+              //     fit: BoxFit.cover,
+
+              //   ),
+              // ),
               child: Stack(
                 children: [
                   // const Align(alignment: Alignment.topCenter, child: NavBar()),
+                  FadeInImage.assetNetwork(
+                      placeholder: "assets/images/matrix.gif",
+                      placeholderFit: BoxFit.cover,
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height,
+                      fit: BoxFit.cover,
+                      image:
+                          "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/bg_img_original.jpg?alt=media&token=ee0db930-cfe9-48a2-9ff8-83edd136c3e3"),
                   Align(
                     alignment: Alignment.center,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const AutoSizeText(
+                        AutoSizeText(
                           "CODe\nPRESENTS",
                           // 'BEACH HACK \nPRESENTS\n',
                           textAlign: TextAlign.center,
@@ -172,6 +200,7 @@ class _MobileViewState extends State<MobileView> {
                               fontFamily: 'Poppins',
                               fontSize: 18,
                               color: Colors.white,
+                              shadows: shadow,
                               fontWeight: FontWeight.w700,
                               letterSpacing: 6.0),
                         ),
@@ -179,14 +208,15 @@ class _MobileViewState extends State<MobileView> {
                           height: 20,
                         ),
                         AutoSizeText.rich(
-                          const TextSpan(
+                          TextSpan(
                             children: [
                               TextSpan(
                                 text: 'BEACH',
                                 style: TextStyle(
                                     fontSize: 30,
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontFamily: "Poppins",
+                                    shadows: shadow,
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: 6.4),
                               ),
@@ -196,6 +226,7 @@ class _MobileViewState extends State<MobileView> {
                                     fontSize: 30,
                                     color: Colors.white,
                                     fontFamily: "Poppins",
+                                    shadows: shadow,
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: 6.4),
                               )
