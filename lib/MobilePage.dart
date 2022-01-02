@@ -109,6 +109,12 @@ class _MobileViewState extends State<MobileView> {
     fontWeight: FontWeight.w700,
     fontSize: 20,
   );
+
+  var _subject_controller = TextEditingController();
+
+  String _email_body = "";
+
+  String _email_subject = "Help";
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -191,7 +197,9 @@ class _MobileViewState extends State<MobileView> {
               height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/bg_img_bg.jpeg"),
+                  image: AssetImage(
+                    "assets/images/bg_img_bg.jpeg",
+                  ),
                   // image: FadeInImage.assetNetwork(
                   //     placeholder: kTransparentImage, image: "image"),
                   // image: NetworkImage(
@@ -1131,11 +1139,12 @@ class _MobileViewState extends State<MobileView> {
                   Container(
                     height: screenHeight * 0.15,
                     width: screenWidth,
-                    child: const TextField(
+                    child: TextField(
                       minLines: 6,
                       maxLines: 7,
-                      style: TextStyle(color: Colors.white),
-                      decoration: InputDecoration(
+                      controller: _subject_controller,
+                      style: const TextStyle(color: Colors.white),
+                      decoration: const InputDecoration(
                         hintText: 'Write something then..',
                         hintStyle: TextStyle(
                           fontSize: 14.0,
@@ -1202,7 +1211,11 @@ class _MobileViewState extends State<MobileView> {
                               borderRadius: BorderRadius.circular(15),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            _email_body = _subject_controller.text;
+                            _sendEmail(
+                                "code@cce.edu.in", _email_subject, _email_body);
+                          },
                           child: Text("Submit")))
                 ],
               ),
@@ -1211,6 +1224,15 @@ class _MobileViewState extends State<MobileView> {
         ),
       ),
     );
+  }
+}
+
+_sendEmail(String toMailId, String subject, String body) async {
+  var url = 'mailto:$toMailId?subject=$subject&body=$body';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
