@@ -422,7 +422,7 @@ class _MobileViewState extends State<MobileView> {
                       fit: BoxFit.fitWidth,
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     Container(
                         decoration: BoxDecoration(
@@ -430,7 +430,7 @@ class _MobileViewState extends State<MobileView> {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
+                          padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -462,7 +462,7 @@ class _MobileViewState extends State<MobileView> {
                           ),
                         )),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     Container(
                       height: screenWidth - ((screenWidth * 0.05) * 2),
@@ -613,7 +613,7 @@ class _MobileViewState extends State<MobileView> {
                       ),
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
