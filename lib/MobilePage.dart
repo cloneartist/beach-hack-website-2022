@@ -16,11 +16,6 @@ class MobileView extends StatefulWidget {
 }
 
 class _MobileViewState extends State<MobileView> {
-  var techImages = [
-    "assets/images/codescreen.png",
-    "assets/images/htmlscreen.png",
-    "assets/images/iphonescreen.png"
-  ];
   var techTitle = ["Coding Competition", "Web Development", "App Development"];
   var techSubtitle = [
     "Are you ready to turn caffeine to <Code/>?",
@@ -35,11 +30,6 @@ class _MobileViewState extends State<MobileView> {
 
   //Gaming
 
-  var gamingImages = [
-    "assets/images/pes.jpg",
-    "assets/images/valorant.png",
-    "assets/images/pubg.png"
-  ];
   var gamingTitle = ["PES", "Valorant", "PUBG"];
   var gamingContent = [
     "The pitch is Yours!",
@@ -441,11 +431,11 @@ class _MobileViewState extends State<MobileView> {
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
                                     color: Colors.white,
-                                    fontSize: 30,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.w700),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                               AutoSizeText(
                                 "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 18th and 19th of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
@@ -1227,7 +1217,7 @@ class _MobileViewState extends State<MobileView> {
 
             Container(
               color: const Color.fromRGBO(36, 37, 41, 1),
-              padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+              padding: EdgeInsets.fromLTRB(30, 20, 30, 30),
               width: screenWidth,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

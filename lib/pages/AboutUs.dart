@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class AboutUs extends StatelessWidget {
-  const AboutUs({Key? key}) : super(key: key);
+  List<String> logos = [
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/LOGO_Dark.png?alt=media&token=762105dc-64db-4466-980f-c13497708121",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/LOGO_BH_LIGHT.png?alt=media&token=b2ba8a6b-cae3-4016-8444-7d16f92c7859",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/CodeLogo.png?alt=media&token=f67ca9bb-6232-40bd-96ae-66b3005d934b",
+    "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/christ_logo.png?alt=media&token=965df78c-9dda-47a9-bb8c-8a1b00b690d7",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +50,9 @@ class AboutUs extends StatelessWidget {
               children: [
                 Flexible(
                     flex: 2,
-                    child: Image.asset(
-                      "assets/images/CodeLogo.png",
+                    child: FadeInImage.assetNetwork(
+                      image: logos[2],
+                      placeholder: "assets/images/load_gif.gif",
                       fit: BoxFit.contain,
                     )),
                 Flexible(
@@ -108,8 +114,9 @@ class AboutUs extends StatelessWidget {
               children: [
                 Flexible(
                     flex: 2,
-                    child: Image.asset(
-                      "assets/images/ChristLogo.png",
+                    child: FadeInImage.assetNetwork(
+                      image: logos[3],
+                      placeholder: "assets/images/load_gif.gif",
                       fit: BoxFit.contain,
                     )),
                 Flexible(

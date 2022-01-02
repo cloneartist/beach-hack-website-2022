@@ -90,13 +90,14 @@ class Intro extends StatelessWidget {
                                 height: 20,
                               ),
                               AutoSizeText(
-                                "Beach Hack 4 is the much anticipated fourth edition of Beach Hackathon, which seeks to become a vital networking arena where talent and opportunity collide. It creates a space for college students and provides them with a helping hand to think from a different perspective. Its main goal is to create software solutions for people with special needs in order to help them overcome their physical and mental limitations.",
-                                maxLines: 6,
+                                "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 18th and 19th of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
+                                maxFontSize: 24,
+                                minFontSize: 16,
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                     color: Color(0xff898989),
                                     fontFamily: 'Poppins',
-                                    fontSize: 24,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w300),
                               ),
                             ],
@@ -272,7 +273,7 @@ class Intro extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "THEME : CHALLENGES OF SPECIALLY ABLED",
+                      "THEME : RELEASING SOON!",
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Poppins',
@@ -280,33 +281,33 @@ class Intro extends StatelessWidget {
                         fontSize: 30,
                       ),
                     ),
-                    Row(
-                      children: [
-                        const Flexible(
-                          flex: 5,
-                          child: Text(
-                            "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 18th and 19th of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w300,
-                              fontSize: 24,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 60,
-                        ),
-                        Flexible(
-                          flex: 2,
-                          child: Lottie.network(
-                            "https://assets9.lottiefiles.com/private_files/lf30_2u9Zt5.json",
-                            animate: true,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                      ],
-                    ),
+                    // Row(
+                    //   children: [
+                    //     const Flexible(
+                    //       flex: 5,
+                    //       child: Text(
+                    //         "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 18th and 19th of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
+                    //         style: TextStyle(
+                    //           color: Colors.white,
+                    //           fontFamily: 'Poppins',
+                    //           fontWeight: FontWeight.w300,
+                    //           fontSize: 24,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //     const SizedBox(
+                    //       width: 60,
+                    //     ),
+                    //     Flexible(
+                    //       flex: 2,
+                    //       child: Lottie.network(
+                    //         "https://assets9.lottiefiles.com/private_files/lf30_2u9Zt5.json",
+                    //         animate: true,
+                    //         fit: BoxFit.contain,
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ],
                 ),
               ),

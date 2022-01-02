@@ -27,14 +27,14 @@ class _HomeState extends State<Home> {
               color: Colors.black,
               child: SingleChildScrollView(
                 child: Column(
-                  children: const [
-                    LandingPage(),
-                    Intro(),
-                    Events(),
-                    PrizePage(),
+                  children: [
+                    const LandingPage(),
+                    const Intro(),
+                    const Events(),
+                    const PrizePage(),
                     // SchedulePage(),
                     AboutUs(),
-                    ContactPage(),
+                    const ContactPage(),
                     Footer(),
                   ],
                 ),
