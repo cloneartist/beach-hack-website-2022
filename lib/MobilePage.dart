@@ -1027,6 +1027,7 @@ class _MobileViewState extends State<MobileView> {
                   ),
                   Timeline.tileBuilder(
                     shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
                     theme: TimelineThemeData(
                       nodePosition: 0.1,
                       connectorTheme: ConnectorThemeData(
