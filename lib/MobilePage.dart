@@ -5,6 +5,7 @@ import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:timelines/timelines.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -78,6 +79,33 @@ class _MobileViewState extends State<MobileView> {
     "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/LOGO_BH_LIGHT.png?alt=media&token=b2ba8a6b-cae3-4016-8444-7d16f92c7859",
     "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/CodeLogo.png?alt=media&token=f67ca9bb-6232-40bd-96ae-66b3005d934b",
     "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/christ_logo.png?alt=media&token=965df78c-9dda-47a9-bb8c-8a1b00b690d7",
+  ];
+
+  //schedule
+
+  var dates = [
+    "1 Feb, 2022",
+    // "4 Feb, 2022",
+    "11 Feb, 2022",
+    "14 Feb, 2022",
+    "18 Feb, 2022",
+    "19 Feb, 2022"
+  ];
+
+  var titles = [
+    "Registration and Idea Submission",
+    "Prototype Submission",
+    "Publishing of shortlisted teams",
+    "Inaugural ceremony and hackathon begins",
+    "Concluding ceremony"
+  ];
+
+  var description = [
+    "Last date to register and to submit idea for the event",
+    "Last date to submit minimum viable product(MVP)",
+    "Results of evaluation on the basis of MVP",
+    "Marks the starting of 24-hour hackathon",
+    "Final presentation and prize distribution"
   ];
 
   var shadow = [
@@ -968,6 +996,108 @@ class _MobileViewState extends State<MobileView> {
                     ),
                   ],
                 ),
+              ),
+            ),
+//Schedule
+
+            Container(
+              width: MediaQuery.of(context).size.width,
+
+              // height: MediaQuery.of(context).size.height,
+              // padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
+              //     screenHeight * 0.08, screenWidth * 0.05, screenHeight * 0.08),
+              color: const Color.fromRGBO(36, 37, 41, 1),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
+                          screenHeight * 0.08, screenWidth * 0.05, 0),
+                      child: Text(
+                        "Schedule",
+                        // gradient: gradientBlue,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Poppins',
+                            fontSize: 30,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                  Timeline.tileBuilder(
+                    shrinkWrap: true,
+                    theme: TimelineThemeData(
+                      nodePosition: 0.1,
+                      connectorTheme: ConnectorThemeData(
+                        thickness: 3.0,
+                        color: Colors.blue,
+                      ),
+                      indicatorTheme: IndicatorThemeData(
+                        size: 15.0,
+                      ),
+                    ),
+                    // padding: EdgeInsets.symmetric(vertical: 20.0),
+                    builder: TimelineTileBuilder.fromStyle(
+                      contentsAlign: ContentsAlign.basic,
+                      indicatorStyle: IndicatorStyle.outlined,
+                      contentsBuilder: (context, index) {
+                        print(index.toString());
+                        return Padding(
+                          padding:
+                              const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 24.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.black,
+                            ),
+                            width: screenWidth,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(
+                                  screenWidth * 0.05,
+                                  screenHeight * 0.05,
+                                  screenWidth * 0.05,
+                                  screenHeight * 0.05),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    dates[index],
+                                    style: TextStyle(
+                                      color: Colors.blue[300],
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  Text(
+                                    titles[index],
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  Text(
+                                    description[index],
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                      itemCount: 5,
+                    ),
+                  ),
+                ],
               ),
             ),
 

@@ -33,10 +33,8 @@ class _NavBarState extends State<NavBar> {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
-            child: FadeInImage.assetNetwork(
-              image:
-                  "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/LOGO_BH_LIGHT.png?alt=media&token=b2ba8a6b-cae3-4016-8444-7d16f92c7859",
-              placeholder: "assets/images/load_gif.gif",
+            child: Image.network(
+              "https://firebasestorage.googleapis.com/v0/b/beach-hack-4.appspot.com/o/LOGO_BH_LIGHT.png?alt=media&token=b2ba8a6b-cae3-4016-8444-7d16f92c7859",
               fit: BoxFit.contain,
             ),
           ),

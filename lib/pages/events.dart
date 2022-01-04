@@ -313,13 +313,12 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
       Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
         child: Container(
-          width: screenWidth,
           height: 30,
           child: Finished[itemIndex]
               ? ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
+                          borderRadius: BorderRadius.circular(20))),
                   onPressed: () {
                     switch (itemIndex) {
                       case 0:
@@ -333,13 +332,13 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
                         break;
                     }
                   },
-                  child: Text("Register"),
+                  child: Text(" Register "),
                 )
               : ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: Colors.grey,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
+                          borderRadius: BorderRadius.circular(20))),
                   onPressed: () {
                     switch (itemIndex) {
                       case 0:
@@ -354,7 +353,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
                     }
                   },
                   child: Text(
-                    "Ended!",
+                    " Ended! ",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
