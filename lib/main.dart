@@ -1,8 +1,6 @@
 import 'package:beach_hack_website/Home.dart';
 import 'package:beach_hack_website/HomePage.dart';
 import 'package:beach_hack_website/MobilePage.dart';
-import 'package:beach_hack_website/test.dart';
-import 'package:beach_hack_website/testtyy.dart';
 import 'package:flutter/material.dart';
 
 void main() {
