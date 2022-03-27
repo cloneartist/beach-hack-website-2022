@@ -332,7 +332,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
                         break;
                     }
                   },
-                  child: Text(" Register "),
+                  child: Text(" Coming Soon! "),
                 )
               : ElevatedButton(
                   style: ElevatedButton.styleFrom(

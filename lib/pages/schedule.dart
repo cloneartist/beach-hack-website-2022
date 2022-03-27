@@ -67,9 +67,7 @@ class SchedulePage extends StatelessWidget {
     return Container(
       // height: height * 1.5,
       // color: Color(0xFFE5E5E5),
-      child: MediaQuery.of(context).size.width <= 768.0
-          ? MobileView(height, width, schedule)
-          : DesktopView(linearGradient, realColor, row, width, schedule),
+      child: DesktopView(linearGradient, realColor, row, width, schedule),
     );
   }
 
@@ -288,123 +286,6 @@ class SchedulePage extends StatelessWidget {
             ),
           ),
         ),
-      ],
-    );
-  }
-
-  Column MobileView(
-      double height, double width, List<Map<String, String>> schedule) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(
-          height: height * 0.05,
-        ),
-        Container(
-          // color: Colors.blue,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                width: width * 0.15,
-                child: Image.asset(
-                  'assets/images/Schedule.png',
-                  fit: BoxFit.contain,
-                ),
-              )
-            ],
-          ),
-        ),
-        SizedBox(
-          height: height * 0.05,
-        ),
-        FixedTimeline.tileBuilder(
-          builder: TimelineTileBuilder.connectedFromStyle(
-            contentsAlign: ContentsAlign.alternating,
-            oppositeContentsBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('opposite\ncontents'),
-            ),
-            contentsBuilder: (context, index) => Container(
-              height: height * 0.30,
-              width: width * 0.37,
-              decoration: BoxDecoration(
-                color: Color(0xFF242529),
-                // color: Colors.red,
-                borderRadius: BorderRadius.circular(40),
-              ),
-              child: Container(
-                child: Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Column(
-                    // mainAxisAlignment:
-                    // MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: height * .05,
-                      ),
-                      Row(
-                        children: [
-                          AutoSizeText(
-                            schedule[index]["name"]!,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: width * .34,
-                            height: height * .07,
-                            child: AutoSizeText(
-                              schedule[index]["subtitle"]!,
-                              maxLines: 2,
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: width * .2,
-                        // height: 20,
-                        padding: EdgeInsets.all(10),
-                        // width: ,
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 1, color: Colors.black),
-                          // color: Color(0xFF242529),
-                          // color: Colors.red,
-                          borderRadius: BorderRadius.circular(40),
-                        ),
-                        child: AutoSizeText(
-                          schedule[index]["date"]!,
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            connectorStyleBuilder: (context, index) => ConnectorStyle.solidLine,
-            indicatorStyleBuilder: (context, index) => IndicatorStyle.dot,
-            itemCount: 8,
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        )
       ],
     );
   }
