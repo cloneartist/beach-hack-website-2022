@@ -18,10 +18,12 @@ class _MySchedulePageState extends State<MySchedulePage> {
     double left = 300;
     double right = 300;
     double bottom = 200;
+    double gap = 150;
 
     var l = [left, null, (width / 2 - ((width / 6) / 2)), left, null];
-    var r = [];
-    double gap = 150;
+    var r = [null, right, null, null, right];
+    var t = [top, top, top + height + gap, null, null];
+    var b = [null, null, null, bottom, bottom];
 
     return SingleChildScrollView(
       child: Container(
@@ -31,110 +33,109 @@ class _MySchedulePageState extends State<MySchedulePage> {
           painter: MyPainter(),
           child: Stack(
             children: [
-              ListView.builder(
-                itemBuilder: (BuildContext context, int index) {
-                  return Positioned(
-                    left: l[index],
-                    top: top,
-                    child: Container(
-                      width: width / 6,
-                      height: height,
-                      color: Colors.red,
-                      child: Column(
-                        children: [
-                          Text("data"),
-                          Text("data"),
-                          Text("data"),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-                itemCount: 5,
-              )
-
-              // Positioned(
-              //   left: l[0],
-              //   top: top,
-              //   child: Container(
-              //     width: width / 6,
-              //     height: height,
-              //     color: Colors.red,
-              //     child: Column(
-              //       children: [
-              //         Text("data"),
-              //         Text("data"),
-              //         Text("data"),
-              //       ],
-              //     ),
-              //   ),
+              // ListView.builder(
+              //   itemBuilder: (BuildContext context, int index) {
+              //     return Positioned(
+              //       left: l[index],
+              //       top: t[index],
+              //       bottom: b[index],
+              //       right: r[index],
+              //       child: Container(
+              //         width: width / 6,
+              //         height: height,
+              //         color: Colors.red,
+              //         child: Column(
+              //           children: [
+              //             Text("data"),
+              //             Text("data"),
+              //             Text("data"),
+              //           ],
+              //         ),
+              //       ),
+              //     );
+              //   },
+              //   itemCount: 5,
               // ),
-              // Positioned(
-              //   right: right,
-              //   top: top,
-              //   left: l[1],
-              //   child: Container(
-              //     width: width / 6,
-              //     height: height,
-              //     color: Colors.red,
-              //     child: Column(
-              //       children: [
-              //         Text("data"),
-              //         Text("data"),
-              //         Text("data"),
-              //       ],
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   top: top + height + gap,
-              //   left: l[2],
-              //   child: Container(
-              //     width: width / 6,
-              //     height: height,
-              //     color: Colors.red,
-              //     child: Column(
-              //       children: [
-              //         Text("data"),
-              //         Text("data"),
-              //         Text("data"),
-              //       ],
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   bottom: bottom,
-              //   left: l[3],
-              //   child: Container(
-              //     width: width / 6,
-              //     height: height,
-              //     color: Colors.red,
-              //     child: Column(
-              //       children: [
-              //         Text("data"),
-              //         Text("data"),
-              //         Text("data"),
-              //       ],
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   bottom: bottom,
-              //   right: right,
-              //   left: l[4],
-              //   child: Container(
-              //     width: width / 6,
-              //     height: height,
-              //     color: Colors.red,
-              //     child: Column(
-              //       children: [
-              //         Text("data"),
-              //         Text("data"),
-              //         Text("data"),
-              //       ],
-              //     ),
-              //   ),
-              // ),
+              Positioned(
+                left: left,
+                top: top,
+                child: Container(
+                  width: width / 6,
+                  height: height,
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                right: right,
+                top: top,
+                child: Container(
+                  width: width / 6,
+                  height: height,
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                top: top + height + gap,
+                left: (width / 2 - ((width / 6) / 2)),
+                child: Container(
+                  width: width / 6,
+                  height: height,
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: bottom,
+                left: left,
+                child: Container(
+                  width: width / 6,
+                  height: height,
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: bottom,
+                right: right,
+                child: Container(
+                  width: width / 6,
+                  height: height,
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Text("data"),
+                      Text("data"),
+                      Text("data"),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
