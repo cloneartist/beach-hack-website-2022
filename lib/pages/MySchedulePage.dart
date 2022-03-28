@@ -54,11 +54,6 @@ class _MySchedulePageState extends State<MySchedulePage> {
       "Final presentation and prize distribution"
     ];
 
-    // var l = [left, null, (width / 2 - ((Wbox) / 2)), left, null];
-    // var r = [null, right, null, null, right];
-    // var t = [top, top, top + height + gap, null, null];
-    // var b = [null, null, null, bottom, bottom];
-
     return SingleChildScrollView(
       child: Container(
         width: MediaQuery.of(context).size.width,
@@ -67,29 +62,6 @@ class _MySchedulePageState extends State<MySchedulePage> {
           painter: MyPainter(),
           child: Stack(
             children: [
-              // ListView.builder(
-              //   itemBuilder: (BuildContext context, int index) {
-              //     return Positioned(
-              //       left: l[index],
-              //       top: t[index],
-              //       bottom: b[index],
-              //       right: r[index],
-              //       child: Container(
-              //         width: Wbox,
-              //         height: height,
-              //         color: Colors.red,
-              //         child: Column(
-              //           children: [
-              //             Text("data"),
-              //             Text("data"),
-              //             Text("data"),
-              //           ],
-              //         ),
-              //       ),
-              //     );
-              //   },
-              //   itemCount: 5,
-              // ),
               Positioned(
                 left: left,
                 top: top,
@@ -111,7 +83,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w800,
-                          fontSize: 20,
+                          fontSize: 30,
                         ),
                       ),
                       Text(
@@ -120,7 +92,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 18,
+                          fontSize: 20,
                         ),
                       ),
                       Text(
@@ -129,7 +101,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.grey,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
-                          fontSize: 16,
+                          fontSize: 18,
                         ),
                       ),
                     ],
@@ -157,7 +129,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w800,
-                          fontSize: 20,
+                          fontSize: 30,
                         ),
                       ),
                       Text(
@@ -166,7 +138,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 18,
+                          fontSize: 20,
                         ),
                       ),
                       Text(
@@ -175,7 +147,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.grey,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
-                          fontSize: 16,
+                          fontSize: 18,
                         ),
                       ),
                     ],
@@ -203,7 +175,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w800,
-                          fontSize: 20,
+                          fontSize: 30,
                         ),
                       ),
                       Text(
@@ -212,7 +184,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 18,
+                          fontSize: 20,
                         ),
                       ),
                       Text(
@@ -221,7 +193,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.grey,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
-                          fontSize: 16,
+                          fontSize: 18,
                         ),
                       ),
                     ],
@@ -249,7 +221,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w800,
-                          fontSize: 20,
+                          fontSize: 30,
                         ),
                       ),
                       Text(
@@ -258,7 +230,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 18,
+                          fontSize: 20,
                         ),
                       ),
                       Text(
@@ -267,7 +239,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.grey,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
-                          fontSize: 16,
+                          fontSize: 18,
                         ),
                       ),
                     ],
@@ -295,7 +267,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w800,
-                          fontSize: 20,
+                          fontSize: 30,
                         ),
                       ),
                       Text(
@@ -304,7 +276,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 18,
+                          fontSize: 20,
                         ),
                       ),
                       Text(
@@ -313,7 +285,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           color: Colors.grey,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
-                          fontSize: 16,
+                          fontSize: 18,
                         ),
                       ),
                     ],
@@ -350,7 +322,7 @@ class MyPainter extends CustomPainter {
     paint.strokeWidth = 5.0;
     paint.strokeCap = StrokeCap.round;
 
-    paint.color = Colors.blue;
+    paint.color = Colors.grey.shade300;
     var path = Path();
 
     path.moveTo(left + Wbox, top + Hbox / 2);
@@ -366,53 +338,27 @@ class MyPainter extends CustomPainter {
     path.lineTo(left, 3 * gap + Hbox * 3.5 + top);
     path.arcToPoint(Offset(left, 4 * gap + Hbox * 4.5 + top),
         radius: const Radius.circular(1), clockwise: false);
-    path.lineTo(width / 2, 4 * gap + Hbox * 4.5 + top);
+    path.lineTo(width / 3, 4 * gap + Hbox * 4.5 + top);
 
     Path dashedPath = Path();
 
-    Path progressPath = Path();
-
-    Paint progressPaint = Paint();
-    progressPaint.color = Colors.blue.shade300;
-    progressPaint.style = PaintingStyle.stroke;
-
-    progressPaint.strokeWidth = 5.0;
-    progressPaint.strokeCap = StrokeCap.round;
-
-    double dashWidth = 20.0;
-    double dashSpace = 10.0;
+    double dashWidth = 30.0;
+    double dashSpace = 15.0;
     double distance = 0.0;
-
-    bool paintShifter = false;
 
     for (PathMetric pathMetric in path.computeMetrics()) {
       while (distance < pathMetric.length) {
-        // progressPath = pathMetric.extractPath(
-        //   0,
-        //   pathMetric.length,
-        // );
-
-        // dashedPath.addPath(
-        //   extractPath,
-        //   Offset.zero,
-        // );
         dashedPath.addPath(
           pathMetric.extractPath(distance, distance + dashWidth),
           Offset.zero,
         );
-
-        print(distance + dashWidth);
 
         distance += dashWidth;
         distance += dashSpace;
       }
     }
 
-    // progressPath = dashedPath;
-
     canvas.drawPath(dashedPath, paint);
-
-    // canvas.drawPath(progressPath, progressPaint);
   }
 
   @override
