@@ -30,15 +30,15 @@ class _HomeState extends State<Home> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    // const LandingPage(),
-                    // const Intro(),
-                    // const Events(),
-                    // const PrizePage(),
+                    const LandingPage(),
+                    const Intro(),
+                    const Events(),
+                    const PrizePage(),
                     // SchedulePage(),
-                    MySchedulePage(),
-                    // AboutUs(),
-                    // ContactPage(),
-                    // Footer(),
+                    const MySchedulePage(),
+                    AboutUs(),
+                    ContactPage(),
+                    Footer(),
                   ],
                 ),
               ),
