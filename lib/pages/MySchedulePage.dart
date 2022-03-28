@@ -63,6 +63,25 @@ class _MySchedulePageState extends State<MySchedulePage> {
           child: Stack(
             children: [
               Positioned(
+                top: 75,
+                left: 90,
+                child: ShaderMask(
+                  shaderCallback: (Rect bounds) {
+                    return gradient.createShader(Offset.zero & bounds.size);
+                  },
+                  child: const Text(
+                    'SCHEDULE',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Poppins',
+                      fontSize: 40.0,
+                      fontWeight: FontWeight.w700,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
                 left: left,
                 top: top,
                 child: Container(
@@ -366,3 +385,7 @@ class MyPainter extends CustomPainter {
     throw UnimplementedError();
   }
 }
+
+const gradient = LinearGradient(
+  colors: [Color.fromRGBO(37, 88, 188, 1), Color.fromRGBO(10, 89, 241, 1)],
+);
