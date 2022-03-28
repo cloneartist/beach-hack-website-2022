@@ -1,5 +1,8 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:timelines/timelines.dart';
+import 'dart:ui';
 
 class MySchedulePage extends StatefulWidget {
   const MySchedulePage({Key? key}) : super(key: key);
@@ -342,34 +345,78 @@ class MyPainter extends CustomPainter {
 
     var paint = Paint();
 
-    paint.color = Colors.blue.shade300;
     paint.style = PaintingStyle.stroke;
-    paint.strokeWidth = 3.0;
 
-    var path1 = Path();
-    var path2 = Path();
+    paint.strokeWidth = 5.0;
+    paint.strokeCap = StrokeCap.round;
 
-    path2.moveTo(left + Wbox, top + Hbox / 2);
-    path2.lineTo(width - right, top + Hbox / 2);
-    path2.arcToPoint(Offset(width - right, gap + Hbox * 1.5 + top),
+    paint.color = Colors.blue;
+    var path = Path();
+
+    path.moveTo(left + Wbox, top + Hbox / 2);
+    path.lineTo(width - right, top + Hbox / 2);
+    path.arcToPoint(Offset(width - right, gap + Hbox * 1.5 + top),
         radius: const Radius.circular(1));
-    path2.lineTo(left, gap + Hbox * 1.5 + top);
-    path2.arcToPoint(Offset(left, 2 * gap + Hbox * 2.5 + top),
+    path.lineTo(left, gap + Hbox * 1.5 + top);
+    path.arcToPoint(Offset(left, 2 * gap + Hbox * 2.5 + top),
         radius: const Radius.circular(1), clockwise: false);
-    path2.lineTo(width - 1.5 * right, 2 * gap + Hbox * 2.5 + top);
-    path2.arcToPoint(Offset(width - 1.5 * right, 3 * gap + Hbox * 3.5 + top),
+    path.lineTo(width - 1.5 * right, 2 * gap + Hbox * 2.5 + top);
+    path.arcToPoint(Offset(width - 1.5 * right, 3 * gap + Hbox * 3.5 + top),
         radius: const Radius.circular(1));
-    path2.lineTo(left, 3 * gap + Hbox * 3.5 + top);
-    path2.arcToPoint(Offset(left, 4 * gap + Hbox * 4.5 + top),
+    path.lineTo(left, 3 * gap + Hbox * 3.5 + top);
+    path.arcToPoint(Offset(left, 4 * gap + Hbox * 4.5 + top),
         radius: const Radius.circular(1), clockwise: false);
-    path2.lineTo(width / 2, 4 * gap + Hbox * 4.5 + top);
-    canvas.drawPath(path2, paint);
-    // TODO: implement paint
+    path.lineTo(width / 2, 4 * gap + Hbox * 4.5 + top);
+
+    Path dashedPath = Path();
+
+    Path progressPath = Path();
+
+    Paint progressPaint = Paint();
+    progressPaint.color = Colors.blue.shade300;
+    progressPaint.style = PaintingStyle.stroke;
+
+    progressPaint.strokeWidth = 5.0;
+    progressPaint.strokeCap = StrokeCap.round;
+
+    double dashWidth = 20.0;
+    double dashSpace = 10.0;
+    double distance = 0.0;
+
+    bool paintShifter = false;
+
+    for (PathMetric pathMetric in path.computeMetrics()) {
+      while (distance < pathMetric.length) {
+        // progressPath = pathMetric.extractPath(
+        //   0,
+        //   pathMetric.length,
+        // );
+
+        // dashedPath.addPath(
+        //   extractPath,
+        //   Offset.zero,
+        // );
+        dashedPath.addPath(
+          pathMetric.extractPath(distance, distance + dashWidth),
+          Offset.zero,
+        );
+
+        print(distance + dashWidth);
+
+        distance += dashWidth;
+        distance += dashSpace;
+      }
+    }
+
+    // progressPath = dashedPath;
+
+    canvas.drawPath(dashedPath, paint);
+
+    // canvas.drawPath(progressPath, progressPaint);
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
     throw UnimplementedError();
   }
 }
