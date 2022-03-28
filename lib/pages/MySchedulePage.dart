@@ -19,7 +19,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
     double left = 300;
     double right = 300;
     double bottom = 200;
-    double gap = 150;
+    double gap = 30;
 
     double Wbox = width / 5; //Width of Box
     double Hbox = 225;
@@ -59,7 +59,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
     return SingleChildScrollView(
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 2 * top + 3 * Hbox + 2 * gap,
+        height: 2 * top + 5 * Hbox,
         child: CustomPaint(
           painter: MyPainter(),
           child: Stack(
@@ -134,8 +134,8 @@ class _MySchedulePageState extends State<MySchedulePage> {
                 ),
               ),
               Positioned(
-                right: right,
-                top: top,
+                right: right + Wbox / 3,
+                top: top + Hbox,
                 child: Container(
                   padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                   decoration: BoxDecoration(
@@ -180,8 +180,8 @@ class _MySchedulePageState extends State<MySchedulePage> {
                 ),
               ),
               Positioned(
-                top: top + Hbox + gap,
-                left: (width / 2 - ((Wbox) / 2)),
+                top: 2.9 * Hbox,
+                left: left - Wbox / 6,
                 child: Container(
                   padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                   decoration: BoxDecoration(
@@ -226,8 +226,8 @@ class _MySchedulePageState extends State<MySchedulePage> {
                 ),
               ),
               Positioned(
-                bottom: bottom,
-                left: left,
+                bottom: bottom + Hbox,
+                right: right,
                 child: Container(
                   padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                   decoration: BoxDecoration(
@@ -272,8 +272,8 @@ class _MySchedulePageState extends State<MySchedulePage> {
                 ),
               ),
               Positioned(
-                bottom: bottom,
-                right: right,
+                bottom: bottom - Hbox / 2,
+                left: width / 2 - Wbox,
                 child: Container(
                   padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                   decoration: BoxDecoration(
@@ -335,16 +335,16 @@ class MyPainter extends CustomPainter {
     double left = 300;
     double right = 300;
     double bottom = 200;
-    double gap = 150;
+    double gap = 30;
 
     double Wbox = width / 5; //Width of Box
     double Hbox = 225;
 
     var paint = Paint();
 
-    paint.color = Colors.grey;
+    paint.color = Colors.blue.shade300;
     paint.style = PaintingStyle.stroke;
-    paint.strokeWidth = 10.0;
+    paint.strokeWidth = 3.0;
 
     var path1 = Path();
     var path2 = Path();
@@ -356,8 +356,13 @@ class MyPainter extends CustomPainter {
     path2.lineTo(left, gap + Hbox * 1.5 + top);
     path2.arcToPoint(Offset(left, 2 * gap + Hbox * 2.5 + top),
         radius: const Radius.circular(1), clockwise: false);
-    path2.lineTo(width - right, 2 * gap + Hbox * 2.5 + top);
-
+    path2.lineTo(width - 1.5 * right, 2 * gap + Hbox * 2.5 + top);
+    path2.arcToPoint(Offset(width - 1.5 * right, 3 * gap + Hbox * 3.5 + top),
+        radius: const Radius.circular(1));
+    path2.lineTo(left, 3 * gap + Hbox * 3.5 + top);
+    path2.arcToPoint(Offset(left, 4 * gap + Hbox * 4.5 + top),
+        radius: const Radius.circular(1), clockwise: false);
+    path2.lineTo(width / 2, 4 * gap + Hbox * 4.5 + top);
     canvas.drawPath(path2, paint);
     // TODO: implement paint
   }
