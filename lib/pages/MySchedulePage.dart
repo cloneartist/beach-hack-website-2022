@@ -99,6 +99,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         dates[0],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -109,6 +110,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         titles[0],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
@@ -119,11 +121,13 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         description[0],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
-                            color: Colors.grey,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
+                          color: Colors.grey,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
                       ),
                     ],
                   ),
@@ -147,6 +151,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         dates[1],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -157,6 +162,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         titles[1],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
@@ -167,11 +173,13 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         description[1],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
-                            color: Colors.grey,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
+                          color: Colors.grey,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
                       ),
                     ],
                   ),
@@ -195,6 +203,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         dates[2],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -205,6 +214,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         titles[2],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
@@ -215,11 +225,13 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         description[2],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
-                            color: Colors.grey,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
+                          color: Colors.grey,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
                       ),
                     ],
                   ),
@@ -243,6 +255,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         dates[3],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -253,6 +266,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         titles[3],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
@@ -263,11 +277,13 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         description[3],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
-                            color: Colors.grey,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
+                          color: Colors.grey,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
                       ),
                     ],
                   ),
@@ -291,6 +307,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         dates[4],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -301,6 +318,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         titles[4],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
@@ -311,11 +329,13 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         description[4],
                         minFontSize: 10,
+                        maxLines: 2,
                         style: TextStyle(
-                            color: Colors.grey,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
+                          color: Colors.grey,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
                       ),
                     ],
                   ),
@@ -392,7 +412,7 @@ class MyPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    throw UnimplementedError();
+    return true;
   }
 }
 
