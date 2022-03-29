@@ -84,19 +84,19 @@ class _MobileViewState extends State<MobileView> {
   //schedule
 
   var dates = [
-    "1 Feb, 2022",
+    "4 May, 2022",
     // "4 Feb, 2022",
-    "11 Feb, 2022",
-    "14 Feb, 2022",
-    "18 Feb, 2022",
-    "19 Feb, 2022"
+    "10 May, 2022",
+    "11 May, 2022",
+    "20 May, 2022",
+    "21 May, 2022"
   ];
 
   var titles = [
     "Registration and Idea Submission",
     "Prototype Submission",
     "Publishing of shortlisted teams",
-    "Inaugural ceremony and hackathon begins",
+    "Inaugural ceremony and offline hackathon begins",
     "Concluding ceremony"
   ];
 
@@ -466,7 +466,7 @@ class _MobileViewState extends State<MobileView> {
                                 height: 10,
                               ),
                               AutoSizeText(
-                                "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 20th and 21st of February 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
+                                "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 20th and 21st of May 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
                                 textAlign: TextAlign.justify,
                                 maxFontSize: 18,
                                 minFontSize: 12,

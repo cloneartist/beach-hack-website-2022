@@ -28,19 +28,19 @@ class _MySchedulePageState extends State<MySchedulePage> {
     //schedule
 
     var dates = [
-      "1 Feb, 2022",
+      "4 May, 2022",
       // "4 Feb, 2022",
-      "11 Feb, 2022",
-      "14 Feb, 2022",
-      "18 Feb, 2022",
-      "19 Feb, 2022"
+      "10 May, 2022",
+      "11 May, 2022",
+      "20 May, 2022",
+      "21 May, 2022"
     ];
 
     var titles = [
       "Registration and Idea Submission",
       "Prototype Submission",
       "Publishing of shortlisted teams",
-      "Inaugural ceremony and hackathon begins",
+      "Inaugural ceremony and offline hackathon begins",
       "Concluding ceremony"
     ];
 
