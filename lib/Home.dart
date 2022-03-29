@@ -1,4 +1,5 @@
 import 'package:beach_hack_website/MobilePage.dart';
+import 'package:beach_hack_website/pages/Coupon.dart';
 import 'package:beach_hack_website/pages/Footer.dart';
 import 'package:beach_hack_website/pages/MySchedulePage.dart';
 import 'package:beach_hack_website/pages/schedule.dart';
@@ -34,6 +35,7 @@ class _HomeState extends State<Home> {
                     const Intro(),
                     const Events(),
                     const PrizePage(),
+                    Coupon(),
                     // SchedulePage(),
                     const MySchedulePage(),
                     AboutUs(),

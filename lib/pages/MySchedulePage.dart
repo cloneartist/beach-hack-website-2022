@@ -1,7 +1,5 @@
-import 'dart:typed_data';
-
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:timelines/timelines.dart';
 import 'dart:ui';
 
 class MySchedulePage extends StatefulWidget {
@@ -62,15 +60,17 @@ class _MySchedulePageState extends State<MySchedulePage> {
           painter: MyPainter(),
           child: Stack(
             children: [
-              Positioned(
-                top: 75,
-                left: 90,
+              Align(
+                alignment: Alignment(-0.88, -0.9),
+                // top: 75,
+                // left: 90,
                 child: ShaderMask(
                   shaderCallback: (Rect bounds) {
                     return gradient.createShader(Offset.zero & bounds.size);
                   },
-                  child: const Text(
+                  child: const AutoSizeText(
                     'SCHEDULE',
+                    minFontSize: 10,
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'Poppins',
@@ -96,8 +96,9 @@ class _MySchedulePageState extends State<MySchedulePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      AutoSizeText(
                         dates[0],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -105,23 +106,24 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           fontSize: 30,
                         ),
                       ),
-                      Text(
+                      AutoSizeText(
                         titles[0],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,
-                        ),
-                      ),
-                      Text(
-                        description[0],
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w400,
                           fontSize: 18,
                         ),
+                      ),
+                      AutoSizeText(
+                        description[0],
+                        minFontSize: 10,
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16),
                       ),
                     ],
                   ),
@@ -142,8 +144,9 @@ class _MySchedulePageState extends State<MySchedulePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      AutoSizeText(
                         dates[1],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -151,23 +154,24 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           fontSize: 30,
                         ),
                       ),
-                      Text(
+                      AutoSizeText(
                         titles[1],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,
-                        ),
-                      ),
-                      Text(
-                        description[1],
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w400,
                           fontSize: 18,
                         ),
+                      ),
+                      AutoSizeText(
+                        description[1],
+                        minFontSize: 10,
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16),
                       ),
                     ],
                   ),
@@ -188,8 +192,9 @@ class _MySchedulePageState extends State<MySchedulePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      AutoSizeText(
                         dates[2],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -197,23 +202,24 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           fontSize: 30,
                         ),
                       ),
-                      Text(
+                      AutoSizeText(
                         titles[2],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,
-                        ),
-                      ),
-                      Text(
-                        description[2],
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w400,
                           fontSize: 18,
                         ),
+                      ),
+                      AutoSizeText(
+                        description[2],
+                        minFontSize: 10,
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16),
                       ),
                     ],
                   ),
@@ -234,8 +240,9 @@ class _MySchedulePageState extends State<MySchedulePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      AutoSizeText(
                         dates[3],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -243,23 +250,24 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           fontSize: 30,
                         ),
                       ),
-                      Text(
+                      AutoSizeText(
                         titles[3],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,
-                        ),
-                      ),
-                      Text(
-                        description[3],
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w400,
                           fontSize: 18,
                         ),
+                      ),
+                      AutoSizeText(
+                        description[3],
+                        minFontSize: 10,
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16),
                       ),
                     ],
                   ),
@@ -280,8 +288,9 @@ class _MySchedulePageState extends State<MySchedulePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      AutoSizeText(
                         dates[4],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.blue[300],
                           fontFamily: "Poppins",
@@ -289,23 +298,24 @@ class _MySchedulePageState extends State<MySchedulePage> {
                           fontSize: 30,
                         ),
                       ),
-                      Text(
+                      AutoSizeText(
                         titles[4],
+                        minFontSize: 10,
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w700,
-                          fontSize: 20,
-                        ),
-                      ),
-                      Text(
-                        description[4],
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w400,
                           fontSize: 18,
                         ),
+                      ),
+                      AutoSizeText(
+                        description[4],
+                        minFontSize: 10,
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16),
                       ),
                     ],
                   ),

@@ -13,7 +13,7 @@ class PrizePage extends StatelessWidget {
     var screenWidth = MediaQuery.of(context).size.width;
     var screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      color: const Color.fromRGBO(36, 37, 41, 1),
+      color: Color.fromARGB(255, 0, 0, 0),
       padding: EdgeInsets.fromLTRB(screenWidth * 0.05, screenHeight * 0.08,
           screenWidth * 0.05, screenHeight * 0.08),
       child: Column(
@@ -47,8 +47,8 @@ class PrizePage extends StatelessWidget {
                     width: screenWidth * 0.25,
                     height: screenHeight * 0.511,
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
-                      color: Color.fromRGBO(0, 0, 0, 1),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: Color.fromRGBO(36, 37, 41, 1),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -98,8 +98,8 @@ class PrizePage extends StatelessWidget {
                     width: screenWidth * 0.25,
                     height: screenHeight * 0.511,
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
-                      color: Color.fromRGBO(0, 0, 0, 1),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: Color.fromRGBO(36, 37, 41, 1),
                     ),
                     child: Stack(
                       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -160,8 +160,8 @@ class PrizePage extends StatelessWidget {
                     width: screenWidth * 0.25,
                     height: screenHeight * 0.511,
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
-                      color: Color.fromRGBO(0, 0, 0, 1),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: Color.fromRGBO(36, 37, 41, 1),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -214,7 +214,7 @@ class PrizePage extends StatelessWidget {
           //   child: Container(
           //     width: MediaQuery.of(context).size.width,
           //     decoration: const BoxDecoration(
-          //       borderRadius: BorderRadius.all(Radius.circular(30)),
+          //       borderRadius: BorderRadius.all(Radius.circular(20)),
           //       gradient: LinearGradient(
           //           begin: Alignment(-0.7, -1),
           //           end: Alignment(0, 0.7),
