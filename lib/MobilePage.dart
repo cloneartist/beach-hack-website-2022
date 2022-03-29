@@ -109,12 +109,12 @@ class _MobileViewState extends State<MobileView> {
   ];
 
   var shadow = [
-    Shadow(
+    const Shadow(
       offset: Offset(5.0, 5.0),
       blurRadius: 5.0,
       color: Color.fromARGB(255, 0, 0, 0),
     ),
-    Shadow(
+    const Shadow(
       offset: Offset(5.0, 5.0),
       blurRadius: 8.0,
       color: Color.fromARGB(125, 0, 0, 255),
@@ -128,11 +128,11 @@ class _MobileViewState extends State<MobileView> {
     fontSize: 20,
   );
 
-  var _subject_controller = TextEditingController();
+  final _subject_controller = TextEditingController();
 
   String _email_body = "";
 
-  String _email_subject = "Help";
+  final String _email_subject = "Help";
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -255,7 +255,7 @@ class _MobileViewState extends State<MobileView> {
                               fontWeight: FontWeight.w700,
                               letterSpacing: 6.0),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         AutoSizeText.rich(
@@ -307,11 +307,11 @@ class _MobileViewState extends State<MobileView> {
                                         width: 40,
                                         height: 50,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 8,
                                       ),
                                       Column(
-                                        children: [
+                                        children: const [
                                           SizedBox(
                                             height: 12,
                                             child: Text(
@@ -341,7 +341,7 @@ class _MobileViewState extends State<MobileView> {
                                 height: 56,
                                 width: 150,
                                 decoration: BoxDecoration(
-                                  color: Color(0xff5865F2),
+                                  color: const Color(0xff5865F2),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Padding(
@@ -354,11 +354,11 @@ class _MobileViewState extends State<MobileView> {
                                         width: 40,
                                         height: 30,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Column(
-                                        children: [
+                                        children: const [
                                           SizedBox(
                                             height: 12,
                                             child: Text(
@@ -439,7 +439,7 @@ class _MobileViewState extends State<MobileView> {
                       width: screenWidth * 0.65,
                       fit: BoxFit.fitWidth,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Container(
@@ -448,7 +448,7 @@ class _MobileViewState extends State<MobileView> {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
+                          padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -479,7 +479,7 @@ class _MobileViewState extends State<MobileView> {
                             ],
                           ),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Container(
@@ -497,7 +497,7 @@ class _MobileViewState extends State<MobileView> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                                color: Color(0xff242529),
+                                color: const Color(0xff242529),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -517,10 +517,10 @@ class _MobileViewState extends State<MobileView> {
                                   width: 70,
                                   height: 70,
                                 ),
-                                Text(
+                                const Text(
                                   "Participants",
                                   style: TextStyle(
-                                      color: Color(0xff898989),
+                                      color: const Color(0xff898989),
                                       fontFamily: 'Poppins',
                                       fontSize: 10,
                                       fontWeight: FontWeight.w700),
@@ -530,7 +530,7 @@ class _MobileViewState extends State<MobileView> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                                color: Color(0xff242529),
+                                color: const Color(0xff242529),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -550,7 +550,7 @@ class _MobileViewState extends State<MobileView> {
                                 //       fontSize: 30,
                                 //       fontWeight: FontWeight.w700),
                                 // ),
-                                Text(
+                                const Text(
                                   "Teams",
                                   style: TextStyle(
                                       color: Color(0xff898989),
@@ -563,7 +563,7 @@ class _MobileViewState extends State<MobileView> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                                color: Color(0xff242529),
+                                color: const Color(0xff242529),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -583,7 +583,7 @@ class _MobileViewState extends State<MobileView> {
                                 //       fontSize: 30,
                                 //       fontWeight: FontWeight.w700),
                                 // ),
-                                Text(
+                                const Text(
                                   "spent coding",
                                   style: TextStyle(
                                       color: Color(0xff898989),
@@ -596,7 +596,7 @@ class _MobileViewState extends State<MobileView> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                                color: Color(0xff242529),
+                                color: const Color(0xff242529),
                                 borderRadius: BorderRadius.circular(20)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -616,7 +616,7 @@ class _MobileViewState extends State<MobileView> {
                                 //       fontSize: 30,
                                 //       fontWeight: FontWeight.w700),
                                 // ),
-                                Text(
+                                const Text(
                                   "Colleges",
                                   style: TextStyle(
                                       color: Color(0xff898989),
@@ -644,8 +644,8 @@ class _MobileViewState extends State<MobileView> {
                         padding: const EdgeInsets.all(30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
+                          children: const [
+                            Text(
                               "THEME\nCOMING SOON!",
                               style: TextStyle(
                                 color: Colors.white,
@@ -675,17 +675,17 @@ class _MobileViewState extends State<MobileView> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xff242529),
+                        color: const Color(0xff242529),
                       ),
                       width: screenWidth,
                       height: screenWidth * 0.25,
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         "Moments",
                         style: TextStyle(
@@ -696,7 +696,7 @@ class _MobileViewState extends State<MobileView> {
                         ),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     CarouselSlider.builder(
@@ -729,7 +729,7 @@ class _MobileViewState extends State<MobileView> {
             ),
             Container(
               width: screenWidth,
-              color: Color(0xff242529),
+              color: const Color(0xff242529),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(
                     screenWidth * 0.05,
@@ -757,7 +757,7 @@ class _MobileViewState extends State<MobileView> {
                     //     ),
                     //   )),
                     // ),
-                    Text(
+                    const Text(
                       "Technical Events",
                       // gradient: gradientBlue,
                       style: TextStyle(
@@ -766,7 +766,7 @@ class _MobileViewState extends State<MobileView> {
                           color: Colors.white,
                           fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     CarouselSlider.builder(
@@ -794,15 +794,15 @@ class _MobileViewState extends State<MobileView> {
                         viewportFraction: 0.8,
                         scrollDirection: Axis.horizontal,
                         autoPlayAnimationDuration: const Duration(seconds: 1),
-                        autoPlayInterval: Duration(seconds: 5),
+                        autoPlayInterval: const Duration(seconds: 5),
                         autoPlay: true,
                       ),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
+                    const Text(
                       "Gaming Events",
                       // gradient: gradientBlue,
                       style: TextStyle(
@@ -811,7 +811,7 @@ class _MobileViewState extends State<MobileView> {
                           fontSize: 30,
                           fontWeight: FontWeight.w700),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     CarouselSlider.builder(
@@ -839,7 +839,7 @@ class _MobileViewState extends State<MobileView> {
                         viewportFraction: 0.8,
                         scrollDirection: Axis.horizontal,
                         autoPlayAnimationDuration: const Duration(seconds: 1),
-                        autoPlayInterval: Duration(seconds: 5),
+                        autoPlayInterval: const Duration(seconds: 5),
                         autoPlay: true,
                       ),
                     ),
@@ -858,7 +858,7 @@ class _MobileViewState extends State<MobileView> {
                     screenHeight * 0.08),
                 child: Column(
                   children: [
-                    Align(
+                    const Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         "Prizes",
@@ -870,15 +870,15 @@ class _MobileViewState extends State<MobileView> {
                             fontWeight: FontWeight.w700),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xff242529),
+                        color: const Color(0xff242529),
                       ),
-                      padding: EdgeInsets.fromLTRB(0, 25, 0, 25),
+                      padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
                       width: screenWidth,
                       child: Column(
                         children: [
@@ -889,7 +889,7 @@ class _MobileViewState extends State<MobileView> {
                             height: 150,
                             fit: BoxFit.contain,
                           ),
-                          Text(
+                          const Text(
                             '1st',
                             style: TextStyle(
                               color: Colors.yellow,
@@ -899,7 +899,7 @@ class _MobileViewState extends State<MobileView> {
                               decoration: TextDecoration.none,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "₹ 50,000",
                             style: TextStyle(
                               color: Colors.white,
@@ -912,13 +912,13 @@ class _MobileViewState extends State<MobileView> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xff242529),
+                        color: const Color(0xff242529),
                       ),
-                      padding: EdgeInsets.fromLTRB(0, 25, 0, 25),
+                      padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
                       width: screenWidth,
                       child: Column(
                         children: [
@@ -929,7 +929,7 @@ class _MobileViewState extends State<MobileView> {
                             height: 135,
                             fit: BoxFit.contain,
                           ),
-                          Text(
+                          const Text(
                             '2nd',
                             style: TextStyle(
                               color: Color.fromRGBO(57, 71, 196, 1),
@@ -939,7 +939,7 @@ class _MobileViewState extends State<MobileView> {
                               decoration: TextDecoration.none,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "₹ 30,000",
                             style: TextStyle(
                               color: Colors.white,
@@ -952,13 +952,13 @@ class _MobileViewState extends State<MobileView> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xff242529),
+                        color: const Color(0xff242529),
                       ),
-                      padding: EdgeInsets.fromLTRB(0, 25, 0, 25),
+                      padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
                       width: screenWidth,
                       child: Column(
                         children: [
@@ -981,7 +981,7 @@ class _MobileViewState extends State<MobileView> {
                               ),
                             ),
                           ),
-                          Text(
+                          const Text(
                             "₹ 20,000",
                             style: TextStyle(
                               color: Colors.white,
@@ -1014,7 +1014,7 @@ class _MobileViewState extends State<MobileView> {
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(screenWidth * 0.05,
                           screenHeight * 0.08, screenWidth * 0.05, 0),
-                      child: Text(
+                      child: const Text(
                         "Schedule",
                         // gradient: gradientBlue,
                         style: TextStyle(
@@ -1027,14 +1027,14 @@ class _MobileViewState extends State<MobileView> {
                   ),
                   Timeline.tileBuilder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     theme: TimelineThemeData(
                       nodePosition: 0.1,
-                      connectorTheme: ConnectorThemeData(
+                      connectorTheme: const ConnectorThemeData(
                         thickness: 3.0,
                         color: Colors.blue,
                       ),
-                      indicatorTheme: IndicatorThemeData(
+                      indicatorTheme: const IndicatorThemeData(
                         size: 15.0,
                       ),
                     ),
@@ -1073,7 +1073,7 @@ class _MobileViewState extends State<MobileView> {
                                   ),
                                   Text(
                                     titles[index],
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w700,
@@ -1082,7 +1082,7 @@ class _MobileViewState extends State<MobileView> {
                                   ),
                                   Text(
                                     description[index],
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.grey,
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w400,
@@ -1113,7 +1113,7 @@ class _MobileViewState extends State<MobileView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Align(
+                  const Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Who Are We?',
@@ -1127,7 +1127,7 @@ class _MobileViewState extends State<MobileView> {
                     ),
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   CircleAvatar(
@@ -1141,10 +1141,10 @@ class _MobileViewState extends State<MobileView> {
                       width: 150,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  AutoSizeText(
+                  const AutoSizeText(
                     'CODE -THE COMMUNITY OF DEVELOPERS',
                     textAlign: TextAlign.center,
                     minFontSize: 14,
@@ -1159,14 +1159,14 @@ class _MobileViewState extends State<MobileView> {
                       height: 1.5,
                     ),
                   ),
-                  SizedBox(height: 25),
-                  AutoSizeText(
+                  const SizedBox(height: 25),
+                  const AutoSizeText(
                     'The Community of Developers, CODe, the face of, Computer science department, Christ college of Engineering was founded on October 6th, 2018. It serves to augment the professional outlook of students, intends to foster practical knowledge and equip them to be socially responsible engineers. CODe with both faculty and students as its members is a very active association and it organises various programmes such as workshops, competitions, keynote speeches, webinars which aid to bridge the gap between theory and practice.Beach Hack, the first ever beach hackathon of South India was conducted by CODe and has become a celebrated name among students all over South India since its inception in February 2019. This association aims to enhance technical and extra curricular activities of students apart from regular curriculum.',
                     textAlign: TextAlign.justify,
                     maxFontSize: 16,
                     minFontSize: 12,
                     style: TextStyle(
-                      color: Color(0xff928D8D),
+                      color: const Color(0xff928D8D),
                       fontFamily: 'Poppins',
                       fontSize: 14,
                       letterSpacing: 0,
@@ -1188,10 +1188,10 @@ class _MobileViewState extends State<MobileView> {
                       placeholder: "assets/images/load_gif.gif",
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  AutoSizeText(
+                  const AutoSizeText(
                     'CHRIST COLLEGE OF ENGINEERING',
                     minFontSize: 14,
                     maxFontSize: 18,
@@ -1206,8 +1206,8 @@ class _MobileViewState extends State<MobileView> {
                       height: 1.5,
                     ),
                   ),
-                  SizedBox(height: 25),
-                  AutoSizeText(
+                  const SizedBox(height: 25),
+                  const AutoSizeText(
                     'Christ College of Engineering established in 2015, is managed by the Carmelites of Mary Immaculate (CMI) congregation of Devamatha Province, Thrissur. CCE is a part of Christ Educational and Charitable Trust, Irinjalakuda and is affiliated to the APJ Abdul Kalam Technological University, Trivandrum, Kerala. CMI institutes are known for providing quality education and they have set up top notch educational institutes all over south India. Christ college of engineering aims to follow the footsteps of many illustrious institutions that the CMI congregation has established and that are annually churning out holistically formed global citizens. The college aims to be a premier professional institution delivering world-class research based education to the students with a view to make them global citizens, effective communicators, responsible leaders and path breaking entrepreneurs. Each and every professional institution is unique and different. What sets our college apart from other professional institutions is how it goes about setting and implementing priorities.',
                     maxFontSize: 16,
                     minFontSize: 12,
@@ -1233,7 +1233,7 @@ class _MobileViewState extends State<MobileView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'CONTACT US',
                     style: TextStyle(
                       color: Colors.white,
@@ -1243,7 +1243,7 @@ class _MobileViewState extends State<MobileView> {
                       decoration: TextDecoration.none,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   const Text(
@@ -1324,7 +1324,7 @@ class _MobileViewState extends State<MobileView> {
                   Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Color(0xff0596FF),
+                        color: const Color(0xff0596FF),
                       ),
                       width: screenWidth * 0.25,
                       height: 30,
@@ -1339,7 +1339,7 @@ class _MobileViewState extends State<MobileView> {
                             _sendEmail(
                                 "code@cce.edu.in", _email_subject, _email_body);
                           },
-                          child: Text("Submit")))
+                          child: const Text("Submit")))
                 ],
               ),
             ),
@@ -1348,7 +1348,7 @@ class _MobileViewState extends State<MobileView> {
 
             Container(
               color: const Color.fromRGBO(36, 37, 41, 1),
-              padding: EdgeInsets.fromLTRB(30, 20, 30, 30),
+              padding: const EdgeInsets.fromLTRB(30, 20, 30, 30),
               width: screenWidth,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1400,7 +1400,7 @@ class _MobileViewState extends State<MobileView> {
                         height: 15,
                       ),
                       Container(
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "  Made with 🤍 CODe 2021\n",
                             style: TextStyle(
@@ -1496,25 +1496,25 @@ const gradientPurple2 = LinearGradient(
   colors: [Color(0xffB813E1), Color(0xffF52C99)],
 );
 
-TextStyle a1 = TextStyle(
+TextStyle a1 = const TextStyle(
   color: Colors.white,
   fontFamily: "Poppins",
   fontSize: 20,
   fontWeight: FontWeight.w700,
 );
-TextStyle a2 = TextStyle(
+TextStyle a2 = const TextStyle(
   color: Colors.white,
   fontFamily: "Poppins",
   fontSize: 16,
   fontWeight: FontWeight.w500,
 );
-TextStyle a3 = TextStyle(
+TextStyle a3 = const TextStyle(
   color: Colors.white,
   fontFamily: "Poppins",
   fontSize: 14,
   fontWeight: FontWeight.w400,
 );
-TextStyle a4 = TextStyle(
+TextStyle a4 = const TextStyle(
   color: Colors.white,
   fontFamily: "Poppins",
   fontSize: 12,
@@ -1532,7 +1532,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
       ClipRRect(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topRight: Radius.circular(20),
           topLeft: Radius.circular(20),
         ),
@@ -1547,7 +1547,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
             ),
           ),
           child: isGame
-              ? SizedBox()
+              ? const SizedBox()
               : Align(
                   alignment: Alignment.topRight,
                   child: Container(
@@ -1618,7 +1618,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
                         break;
                     }
                   },
-                  child: Text("Register"),
+                  child: const Text("Register"),
                 )
               : ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -1638,14 +1638,14 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
                         break;
                     }
                   },
-                  child: Text(
+                  child: const Text(
                     "Ended!",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 10,
       ),
     ],
