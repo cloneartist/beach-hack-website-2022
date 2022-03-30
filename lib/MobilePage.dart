@@ -1286,11 +1286,11 @@ class _MobileViewState extends State<MobileView> {
                   const SizedBox(height: 25),
                   const AutoSizeText(
                     'The Community of Developers, CODe, the face of, Computer science department, Christ college of Engineering was founded on October 6th, 2018. It serves to augment the professional outlook of students, intends to foster practical knowledge and equip them to be socially responsible engineers. CODe with both faculty and students as its members is a very active association and it organises various programmes such as workshops, competitions, keynote speeches, webinars which aid to bridge the gap between theory and practice.Beach Hack, the first ever beach hackathon of South India was conducted by CODe and has become a celebrated name among students all over South India since its inception in February 2019. This association aims to enhance technical and extra curricular activities of students apart from regular curriculum.',
-                    textAlign: TextAlign.center,
-                    maxFontSize: 16,
-                    minFontSize: 12,
+                    textAlign: TextAlign.justify,
+                    maxFontSize: 14,
+                    minFontSize: 10,
                     style: TextStyle(
-                      color: const Color(0xff928D8D),
+                      color: Color(0xff928D8D),
                       fontFamily: 'Poppins',
                       fontSize: 14,
                       letterSpacing: 0,
@@ -1333,9 +1333,9 @@ class _MobileViewState extends State<MobileView> {
                   const SizedBox(height: 25),
                   const AutoSizeText(
                     'Christ College of Engineering established in 2015, is managed by the Carmelites of Mary Immaculate (CMI) congregation of Devamatha Province, Thrissur. CCE is a part of Christ Educational and Charitable Trust, Irinjalakuda and is affiliated to the APJ Abdul Kalam Technological University, Trivandrum, Kerala. CMI institutes are known for providing quality education and they have set up top notch educational institutes all over south India. Christ college of engineering aims to follow the footsteps of many illustrious institutions that the CMI congregation has established and that are annually churning out holistically formed global citizens. The college aims to be a premier professional institution delivering world-class research based education to the students with a view to make them global citizens, effective communicators, responsible leaders and path breaking entrepreneurs. Each and every professional institution is unique and different. What sets our college apart from other professional institutions is how it goes about setting and implementing priorities.',
-                    maxFontSize: 16,
-                    minFontSize: 12,
-                    textAlign: TextAlign.center,
+                    maxFontSize: 14,
+                    minFontSize: 10,
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
                       color: Color(0xff928D8D),
                       fontFamily: 'Poppins',

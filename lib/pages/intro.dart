@@ -57,7 +57,7 @@ class Intro extends StatelessWidget {
               fit: BoxFit.fitWidth,
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             SizedBox(
               height: (MediaQuery.of(context).size.width / 7) * 2 - 40,
@@ -87,17 +87,18 @@ class Intro extends StatelessWidget {
                                     fontWeight: FontWeight.w700),
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                               AutoSizeText(
                                 "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 20th and 21st of May 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
-                                maxFontSize: 20,
-                                minFontSize: 16,
+                                maxFontSize: 22,
+                                minFontSize: 6,
+                                maxLines: 7,
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                     color: Color(0xff898989),
                                     fontFamily: 'Poppins',
-                                    fontSize: 20,
+                                    fontSize: 22,
                                     fontWeight: FontWeight.w300),
                               ),
                             ],
