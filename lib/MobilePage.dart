@@ -108,6 +108,20 @@ class _MobileViewState extends State<MobileView> {
     "Final presentation and prize distribution"
   ];
 
+  // coupon winners
+
+  List<String> title = [
+    "1st Prize Winner",
+    "2nd Prize Winner",
+    "3rd Prize Winner"
+  ];
+
+  List<String> names = [
+    "Ritty",
+    "Thomas",
+    "Sabna",
+  ];
+
   var shadow = [
     const Shadow(
       offset: Offset(5.0, 5.0),
@@ -1102,6 +1116,116 @@ class _MobileViewState extends State<MobileView> {
               ),
             ),
 
+// Coupon winners
+
+            Container(
+              color: Colors.black,
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(
+                    screenWidth * 0.05,
+                    screenHeight * 0.08,
+                    screenWidth * 0.05,
+                    screenHeight * 0.08),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Coupon Winners",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Poppins',
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    MediaQuery.removePadding(
+                      removeTop: true,
+                      context: context,
+                      child: ListView.separated(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 3,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            decoration: const BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                              color: Color(0xff242529),
+                            ),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Expanded(
+                                    flex: 1,
+                                    child: FadeInImage.assetNetwork(
+                                      placeholder: "assets/images/load_gif.gif",
+                                      image: urlOfPrizes[index],
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  Expanded(
+                                    flex: 5,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        AutoSizeText(
+                                          title[index],
+                                          maxLines: 1,
+                                          style: TextStyle(
+                                            color: Colors.blue.shade300,
+                                            fontSize: 25.0,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w900,
+                                            decoration: TextDecoration.none,
+                                          ),
+                                        ),
+                                        AutoSizeText(
+                                          names[index],
+                                          maxLines: 1,
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.0,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w700,
+                                            decoration: TextDecoration.none,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, int index) {
+                          return const SizedBox(
+                            height: 20,
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
             //about us
 
             Container(
@@ -1162,7 +1286,7 @@ class _MobileViewState extends State<MobileView> {
                   const SizedBox(height: 25),
                   const AutoSizeText(
                     'The Community of Developers, CODe, the face of, Computer science department, Christ college of Engineering was founded on October 6th, 2018. It serves to augment the professional outlook of students, intends to foster practical knowledge and equip them to be socially responsible engineers. CODe with both faculty and students as its members is a very active association and it organises various programmes such as workshops, competitions, keynote speeches, webinars which aid to bridge the gap between theory and practice.Beach Hack, the first ever beach hackathon of South India was conducted by CODe and has become a celebrated name among students all over South India since its inception in February 2019. This association aims to enhance technical and extra curricular activities of students apart from regular curriculum.',
-                    textAlign: TextAlign.justify,
+                    textAlign: TextAlign.center,
                     maxFontSize: 16,
                     minFontSize: 12,
                     style: TextStyle(
@@ -1211,7 +1335,7 @@ class _MobileViewState extends State<MobileView> {
                     'Christ College of Engineering established in 2015, is managed by the Carmelites of Mary Immaculate (CMI) congregation of Devamatha Province, Thrissur. CCE is a part of Christ Educational and Charitable Trust, Irinjalakuda and is affiliated to the APJ Abdul Kalam Technological University, Trivandrum, Kerala. CMI institutes are known for providing quality education and they have set up top notch educational institutes all over south India. Christ college of engineering aims to follow the footsteps of many illustrious institutions that the CMI congregation has established and that are annually churning out holistically formed global citizens. The college aims to be a premier professional institution delivering world-class research based education to the students with a view to make them global citizens, effective communicators, responsible leaders and path breaking entrepreneurs. Each and every professional institution is unique and different. What sets our college apart from other professional institutions is how it goes about setting and implementing priorities.',
                     maxFontSize: 16,
                     minFontSize: 12,
-                    textAlign: TextAlign.justify,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color(0xff928D8D),
                       fontFamily: 'Poppins',
@@ -1618,7 +1742,7 @@ Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
                         break;
                     }
                   },
-                  child: const Text("Register"),
+                  child: const Text("Coming Soon!"),
                 )
               : ElevatedButton(
                   style: ElevatedButton.styleFrom(
