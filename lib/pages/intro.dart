@@ -74,7 +74,11 @@ class Intro extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(40),
+                          padding: EdgeInsets.fromLTRB(
+                              screenWidth * 0.02,
+                              screenHeight * 0.03,
+                              screenWidth * 0.02,
+                              screenHeight * 0.02),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
@@ -87,12 +91,12 @@ class Intro extends StatelessWidget {
                                     fontWeight: FontWeight.w700),
                               ),
                               SizedBox(
-                                height: 10,
+                                height: 5,
                               ),
                               AutoSizeText(
                                 "Beach Hack is a 24 hour hackathon, which brings computer programmers and software developers, to collaborate and find an innovative solution to some of the problems we face in our society, and simultaneously improve their critical and creative thinking. Beach Hack 4, the much awaited 4th season of beach hack, is to be held on the 20th and 21st of May 2022, on the shores of Cherai Beach, Kochi. It creates a space for college students and provides them with a helping hand to think from a different perspective.",
                                 maxFontSize: 22,
-                                minFontSize: 6,
+                                minFontSize: 4,
                                 maxLines: 7,
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
@@ -213,7 +217,7 @@ class Intro extends StatelessWidget {
                                 gradient: gradientGreen,
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 40,
+                                    fontSize: 35,
                                     fontWeight: FontWeight.w700),
                               ),
                               Text(
