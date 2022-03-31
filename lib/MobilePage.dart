@@ -364,11 +364,11 @@ class _MobileViewState extends State<MobileView> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      // Image.asset(
-                                      //   "assets/images/discord.png",
-                                      //   width: 40,
-                                      //   height: 30,
-                                      // ),
+                                      Image.asset(
+                                        "assets/images/Discord-Logo-White.png",
+                                        width: 40,
+                                        height: 30,
+                                      ),
                                       const SizedBox(
                                         width: 10,
                                       ),

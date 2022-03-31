@@ -65,99 +65,88 @@ class _LandingPageState extends State<LandingPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Container(
-                    height: 56,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          // Image.asset(
-                          //   "assets/images/devfolio.png",
-                          //   width: 40,
-                          //   height: 50,
-                          // ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 12,
-                                child: Text(
-                                  'Apply with\n',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 10),
-                                ),
+                // Container(
+                //   height: 56,
+                //   width: 150,
+                //   decoration: BoxDecoration(
+                //     color: Colors.blue,
+                //     borderRadius: BorderRadius.circular(16),
+                //   ),
+                //   child: Padding(
+                //     padding: const EdgeInsets.all(8.0),
+                //     child: Row(
+                //       mainAxisAlignment: MainAxisAlignment.center,
+                //       children: [
+                //         // Image.asset(
+                //         //   "assets/images/devfolio.png",
+                //         //   width: 40,
+                //         //   height: 50,
+                //         // ),
+                //         SizedBox(
+                //           width: 8,
+                //         ),
+                //         Column(
+                //           children: [
+                //             SizedBox(
+                //               height: 12,
+                //               child: Text(
+                //                 'Apply with Devfolio\n',
+                //                 style: TextStyle(
+                //                     fontFamily: 'Poppins',
+                //                     color: Colors.white,
+                //                     fontSize: 10),
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // ),
+
+                Container(
+                  height: 56,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Color(0xff5865F2),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/images/Discord-Logo-White.png",
+                          fit: BoxFit.contain,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          children: [
+                            SizedBox(
+                              height: 12,
+                              child: Text(
+                                'JOIN US ON\n',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    fontSize: 10),
                               ),
-                              Text("Devfolio",
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 18)),
-                            ],
-                          ),
-                        ],
-                      ),
+                            ),
+                            Text("Discord",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 18)),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(
-                    width: 64,
-                  ),
-                  Container(
-                    height: 56,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: Color(0xff5865F2),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          // Image.asset(
-                          //   "assets/images/discord.png",
-                          //   width: 40,
-                          //   height: 30,
-                          // ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 12,
-                                child: Text(
-                                  'JOIN US ON\n',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 10),
-                                ),
-                              ),
-                              Text("Discord",
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 18)),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ]),
+                ),
               ],
             ),
           )
