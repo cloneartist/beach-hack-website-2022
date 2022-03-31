@@ -78,11 +78,11 @@ class _LandingPageState extends State<LandingPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            "assets/images/devfolio.png",
-                            width: 40,
-                            height: 50,
-                          ),
+                          // Image.asset(
+                          //   "assets/images/devfolio.png",
+                          //   width: 40,
+                          //   height: 50,
+                          // ),
                           SizedBox(
                             width: 8,
                           ),
@@ -125,11 +125,11 @@ class _LandingPageState extends State<LandingPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            "assets/images/discord.png",
-                            width: 40,
-                            height: 30,
-                          ),
+                          // Image.asset(
+                          //   "assets/images/discord.png",
+                          //   width: 40,
+                          //   height: 30,
+                          // ),
                           SizedBox(
                             width: 10,
                           ),

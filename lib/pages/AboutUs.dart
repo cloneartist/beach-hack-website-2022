@@ -27,7 +27,7 @@ class AboutUs extends StatelessWidget {
               return gradient.createShader(Offset.zero & bounds.size);
             },
             child: const Text(
-              'Who Are We?',
+              'ABOUT US',
               style: TextStyle(
                 color: Colors.white,
                 fontFamily: 'Poppins',

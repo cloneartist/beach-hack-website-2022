@@ -28,7 +28,7 @@ class Coupon extends StatelessWidget {
     var screenWidth = MediaQuery.of(context).size.width;
     var screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      color: const Color.fromRGBO(36, 37, 41, 1),
+      color: Colors.black,
       width: MediaQuery.of(context).size.width,
       child: Padding(
         padding: EdgeInsets.fromLTRB(screenWidth * 0.05, screenHeight * 0.08,
@@ -95,7 +95,7 @@ class Coupon extends StatelessWidget {
                       height: screenWidth / 3,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromRGBO(36, 37, 41, 1),
                       ),
                     )),
                 const SizedBox(
@@ -114,7 +114,7 @@ class Coupon extends StatelessWidget {
                             decoration: const BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
-                              color: Color.fromARGB(255, 0, 0, 0),
+                              color: Color.fromRGBO(36, 37, 41, 1),
                             ),
                             child: Padding(
                               padding:

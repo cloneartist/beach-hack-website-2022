@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:beach_hack_website/constants/GradientText.dart';
 import 'package:beach_hack_website/pages/landing_page.dart';
+import 'package:beach_hack_website/pages/sponsor.dart';
 import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -316,11 +317,11 @@ class _MobileViewState extends State<MobileView> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "assets/images/devfolio.png",
-                                        width: 40,
-                                        height: 50,
-                                      ),
+                                      // Image.asset(
+                                      //   "assets/images/devfolio.png",
+                                      //   width: 40,
+                                      //   height: 50,
+                                      // ),
                                       const SizedBox(
                                         width: 8,
                                       ),
@@ -363,11 +364,11 @@ class _MobileViewState extends State<MobileView> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(
-                                        "assets/images/discord.png",
-                                        width: 40,
-                                        height: 30,
-                                      ),
+                                      // Image.asset(
+                                      //   "assets/images/discord.png",
+                                      //   width: 40,
+                                      //   height: 30,
+                                      // ),
                                       const SizedBox(
                                         width: 10,
                                       ),
@@ -1115,6 +1116,9 @@ class _MobileViewState extends State<MobileView> {
                 ],
               ),
             ),
+//Sponsors
+
+            Sponsor(),
 
 // Coupon winners
 
