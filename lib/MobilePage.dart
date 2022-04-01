@@ -5,6 +5,7 @@ import 'package:beach_hack_website/pages/sponsor.dart';
 import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
 import 'package:timelines/timelines.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -302,101 +303,91 @@ class _MobileViewState extends State<MobileView> {
                         const SizedBox(
                           height: 50,
                         ),
-                        Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 56,
-                                width: 150,
-                                decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.circular(20),
+                        Container(
+                          height: 44,
+                          width: 312,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Color(0xff3770ff),
+                            borderRadius: BorderRadius.circular(3),
+                          ),
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/images/svg-path.svg",
+                                  width: 24,
+                                  height: 24,
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      // Image.asset(
-                                      //   "assets/images/devfolio.png",
-                                      //   width: 40,
-                                      //   height: 50,
-                                      // ),
-                                      const SizedBox(
-                                        width: 8,
-                                      ),
-                                      Column(
-                                        children: const [
-                                          SizedBox(
-                                            height: 12,
-                                            child: Text(
-                                              'Apply with\n',
-                                              style: TextStyle(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.white,
-                                                  fontSize: 10),
-                                            ),
-                                          ),
-                                          Text("Devfolio",
-                                              style: TextStyle(
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
-                                                  fontSize: 18)),
-                                        ],
-                                      ),
-                                    ],
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 10, 20, 0),
+                                  child: Text(
+                                    'Apply with Devfolio\n',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white,
+                                        letterSpacing: 0.8,
+                                        fontSize: 18),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Container(
-                                height: 56,
-                                width: 150,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xff5865F2),
-                                  borderRadius: BorderRadius.circular(20),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Container(
+                          height: 56,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Color(0xff5865F2),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/images/Discord-Logo-White.svg",
+                                  fit: BoxFit.fitHeight,
+                                  height: 30,
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(
-                                        "assets/images/Discord-Logo-White.png",
-                                        width: 40,
-                                        height: 30,
-                                      ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      Column(
-                                        children: const [
-                                          SizedBox(
-                                            height: 12,
-                                            child: Text(
-                                              'JOIN US ON\n',
-                                              style: TextStyle(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.white,
-                                                  fontSize: 10),
-                                            ),
-                                          ),
-                                          Text("Discord",
-                                              style: TextStyle(
-                                                  fontFamily: 'Poppins',
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
-                                                  fontSize: 18)),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                                SizedBox(
+                                  width: 10,
                                 ),
-                              ),
-                            ]),
+                                Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 12,
+                                      child: Text(
+                                        'JOIN US ON\n',
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.white,
+                                            fontSize: 10),
+                                      ),
+                                    ),
+                                    Text("Discord",
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: 18)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   )

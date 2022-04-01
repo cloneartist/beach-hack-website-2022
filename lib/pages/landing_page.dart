@@ -1,5 +1,6 @@
 import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -65,45 +66,46 @@ class _LandingPageState extends State<LandingPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                // Container(
-                //   height: 56,
-                //   width: 150,
-                //   decoration: BoxDecoration(
-                //     color: Colors.blue,
-                //     borderRadius: BorderRadius.circular(16),
-                //   ),
-                //   child: Padding(
-                //     padding: const EdgeInsets.all(8.0),
-                //     child: Row(
-                //       mainAxisAlignment: MainAxisAlignment.center,
-                //       children: [
-                //         // Image.asset(
-                //         //   "assets/images/devfolio.png",
-                //         //   width: 40,
-                //         //   height: 50,
-                //         // ),
-                //         SizedBox(
-                //           width: 8,
-                //         ),
-                //         Column(
-                //           children: [
-                //             SizedBox(
-                //               height: 12,
-                //               child: Text(
-                //                 'Apply with Devfolio\n',
-                //                 style: TextStyle(
-                //                     fontFamily: 'Poppins',
-                //                     color: Colors.white,
-                //                     fontSize: 10),
-                //               ),
-                //             ),
-                //           ],
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
-
+                Container(
+                  height: 44,
+                  width: 312,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Color(0xff3770ff),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          "assets/images/svg-path.svg",
+                          width: 24,
+                          height: 24,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 12, 20, 0),
+                          child: Text(
+                            'Apply with Devfolio\n',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                letterSpacing: 0.8,
+                                fontSize: 18),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
                 Container(
                   height: 56,
                   width: 150,
@@ -116,9 +118,10 @@ class _LandingPageState extends State<LandingPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          "assets/images/Discord-Logo-White.png",
-                          fit: BoxFit.contain,
+                        SvgPicture.asset(
+                          "assets/images/Discord-Logo-White.svg",
+                          fit: BoxFit.fitHeight,
+                          height: 30,
                         ),
                         SizedBox(
                           width: 10,
