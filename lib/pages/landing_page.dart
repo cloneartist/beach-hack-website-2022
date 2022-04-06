@@ -1,6 +1,11 @@
+import 'dart:ui';
+
 import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'dart:js' as js;
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -10,6 +15,14 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+//   final html = Html(
+//   data: """<div
+// 	class="apply-button"
+// 	data-hackathon-slug="beachhack"
+// 	data-button-theme="light"
+// 	style="height: 44px; width: 312px"
+// ></div>""",
+// );
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -66,43 +79,55 @@ class _LandingPageState extends State<LandingPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                Container(
-                  height: 44,
-                  width: 312,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Color(0xff3770ff),
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          "assets/images/svg-path.svg",
-                          width: 24,
-                          height: 24,
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 12, 20, 0),
-                          child: Text(
-                            'Apply with Devfolio\n',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white,
-                                letterSpacing: 0.8,
-                                fontSize: 18),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                Html(
+                  data: """<div 
+	class="apply-button" 
+	data-hackathon-slug="beachhack" 
+	data-button-theme="light"
+	style="height: 44px; width: 312px"
+></div>""",
                 ),
+                // GestureDetector(
+                //   onTap: () {
+                //   },
+                //   child: Container(
+                //     height: 44,
+                //     width: 312,
+                //     alignment: Alignment.center,
+                //     decoration: BoxDecoration(
+                //       color: Color(0xff3770ff),
+                //       borderRadius: BorderRadius.circular(3),
+                //     ),
+                //     child: Center(
+                //       child: Row(
+                //         mainAxisAlignment: MainAxisAlignment.center,
+                //         crossAxisAlignment: CrossAxisAlignment.center,
+                //         children: [
+                //           SvgPicture.asset(
+                //             "assets/images/svg-path.svg",
+                //             width: 24,
+                //             height: 24,
+                //           ),
+                //           SizedBox(
+                //             width: 8,
+                //           ),
+                //           Padding(
+                //             padding: const EdgeInsets.fromLTRB(0, 12, 20, 0),
+                //             child: Text(
+                //               'Apply with Devfolio\n',
+                //               textAlign: TextAlign.center,
+                //               style: TextStyle(
+                //                   fontWeight: FontWeight.w600,
+                //                   color: Colors.white,
+                //                   letterSpacing: 0.8,
+                //                   fontSize: 18),
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 SizedBox(
                   height: 40,
                 ),
