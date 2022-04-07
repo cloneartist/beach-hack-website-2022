@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Sponsor extends StatelessWidget {
   const Sponsor({Key? key}) : super(key: key);
@@ -94,9 +95,14 @@ class Sponsor extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          Image.asset(
-            "assets/images/Devfolio_Logo-White.png",
-            fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              _launchURL("https://devfolio.co");
+            },
+            child: Image.asset(
+              "assets/images/Devfolio_Logo-White.png",
+              fit: BoxFit.cover,
+            ),
           ),
           const SizedBox(
             height: 30,
@@ -145,22 +151,34 @@ class Sponsor extends StatelessWidget {
             spacing: 20,
             runSpacing: 20,
             children: [
-              Image.asset(
-                "assets/images/Tezos_Logo-White.png",
-                fit: BoxFit.cover,
+              GestureDetector(
+                onTap: (() => launch("https://tezos.com")),
+                child: Image.asset(
+                  "assets/images/Tezos_Logo-White.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-              Image.asset(
-                "assets/images/Polygon_Logo-White.png",
-                fit: BoxFit.cover,
+              GestureDetector(
+                onTap: (() => launch("https://polygon.technology")),
+                child: Image.asset(
+                  "assets/images/Polygon_Logo-White.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-              Image.asset(
-                "assets/images/Celo Logo Monochrome Reverse.png",
-                fit: BoxFit.cover,
+              GestureDetector(
+                onTap: (() => launch("https://celo.org")),
+                child: Image.asset(
+                  "assets/images/Celo Logo Monochrome Reverse.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-              Image.asset(
-                "assets/images/Filecoin White.png",
-                width: 250,
-                fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () => launch("https://filecoin.io"),
+                child: Image.asset(
+                  "assets/images/Filecoin White.png",
+                  width: 250,
+                  fit: BoxFit.cover,
+                ),
               ),
             ],
           ),
@@ -176,3 +194,7 @@ class Sponsor extends StatelessWidget {
 const gradient = LinearGradient(
   colors: [Color.fromRGBO(37, 88, 188, 1), Color.fromRGBO(10, 89, 241, 1)],
 );
+
+void _launchURL(String url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
+}

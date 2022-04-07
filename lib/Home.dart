@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const LandingPage(),
+                    LandingPage(),
                     const Intro(),
                     const Events(),
                     const PrizePage(),
