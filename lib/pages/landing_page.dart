@@ -1,6 +1,7 @@
 import 'package:beach_hack_website/routes/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -67,7 +68,9 @@ class _LandingPageState extends State<LandingPage> {
                   height: 40,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    _launchURL("https://beachhack.devfolio.co");
+                  },
                   child: Container(
                     height: 44,
                     width: 312,
@@ -160,4 +163,8 @@ class _LandingPageState extends State<LandingPage> {
       ),
     );
   }
+}
+
+void _launchURL(String url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
 }

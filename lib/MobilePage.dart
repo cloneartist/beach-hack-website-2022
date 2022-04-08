@@ -303,41 +303,46 @@ class _MobileViewState extends State<MobileView> {
                         const SizedBox(
                           height: 50,
                         ),
-                        Container(
-                          height: 44,
-                          width: 312,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            color: Color(0xff3770ff),
-                            borderRadius: BorderRadius.circular(3),
-                          ),
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  "assets/images/svg-path.svg",
-                                  width: 24,
-                                  height: 24,
-                                ),
-                                SizedBox(
-                                  width: 8,
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 10, 20, 0),
-                                  child: Text(
-                                    'Apply with Devfolio\n',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
-                                        letterSpacing: 0.8,
-                                        fontSize: 18),
+                        GestureDetector(
+                          onTap: (() {
+                            launch("https://beachhack.devfolio.co");
+                          }),
+                          child: Container(
+                            height: 44,
+                            width: 312,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: Color(0xff3770ff),
+                              borderRadius: BorderRadius.circular(3),
+                            ),
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    "assets/images/svg-path.svg",
+                                    width: 24,
+                                    height: 24,
                                   ),
-                                ),
-                              ],
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 10, 20, 0),
+                                    child: Text(
+                                      'Apply with Devfolio\n',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white,
+                                          letterSpacing: 0.8,
+                                          fontSize: 18),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
