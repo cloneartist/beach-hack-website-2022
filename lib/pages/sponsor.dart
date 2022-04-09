@@ -95,15 +95,30 @@ class Sponsor extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          GestureDetector(
-            onTap: () {
-              _launchURL("https://devfolio.co");
-            },
-            child: Image.asset(
-              "assets/images/Devfolio_Logo-White.png",
-              fit: BoxFit.cover,
-            ),
-          ),
+          Wrap(
+              direction: Axis.horizontal,
+              alignment: WrapAlignment.spaceEvenly,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: 40,
+              runSpacing: 30,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    _launchURL("https://devfolio.co");
+                  },
+                  child: Image.asset(
+                    "assets/images/Devfolio_Logo-White.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: (() => launch("https://polygon.technology")),
+                  child: Image.asset(
+                    "assets/images/Polygon_Logo-White.png",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ]),
           const SizedBox(
             height: 30,
           ),
@@ -155,13 +170,6 @@ class Sponsor extends StatelessWidget {
                 onTap: (() => launch("https://tezos.com")),
                 child: Image.asset(
                   "assets/images/Tezos_Logo-White.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              GestureDetector(
-                onTap: (() => launch("https://polygon.technology")),
-                child: Image.asset(
-                  "assets/images/Polygon_Logo-White.png",
                   fit: BoxFit.cover,
                 ),
               ),
