@@ -1,4 +1,3 @@
-import 'package:beach_hack_website/HomePage.dart';
 import 'package:beach_hack_website/main.dart';
 import 'package:flutter/material.dart';
 
