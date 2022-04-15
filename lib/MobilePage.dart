@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:beach_hack_website/constants/GradientText.dart';
-import 'package:beach_hack_website/pages/landing_page.dart';
-import 'package:beach_hack_website/pages/sponsor.dart';
-import 'package:beach_hack_website/routes/navbar.dart';
+import 'package:beach_hack_4/constants/GradientText.dart';
+import 'package:beach_hack_4/pages/landing_page.dart';
+import 'package:beach_hack_4/pages/sponsor.dart';
+import 'package:beach_hack_4/routes/navbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -1,9 +1,9 @@
-import 'package:beach_hack_website/MobilePage.dart';
-import 'package:beach_hack_website/pages/Coupon.dart';
-import 'package:beach_hack_website/pages/Footer.dart';
-import 'package:beach_hack_website/pages/MySchedulePage.dart';
-import 'package:beach_hack_website/pages/schedule.dart';
-import 'package:beach_hack_website/pages/sponsor.dart';
+import 'package:beach_hack_4/MobilePage.dart';
+import 'package:beach_hack_4/pages/Coupon.dart';
+import 'package:beach_hack_4/pages/Footer.dart';
+import 'package:beach_hack_4/pages/MySchedulePage.dart';
+import 'package:beach_hack_4/pages/schedule.dart';
+import 'package:beach_hack_4/pages/sponsor.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

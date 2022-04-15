@@ -1,4 +1,4 @@
-import 'package:beach_hack_website/main.dart';
+import 'package:beach_hack_4/main.dart';
 import 'package:flutter/material.dart';
 
 Map<String, bool> navItems = {

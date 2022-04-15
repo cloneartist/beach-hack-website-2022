@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.beach_hack_website">
+    package="com.example.beach_hack_4">
    <application
-        android:label="beach_hack_website"
+        android:label="beach_hack_4"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
