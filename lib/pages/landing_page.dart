@@ -112,47 +112,52 @@ class _LandingPageState extends State<LandingPage> {
                 SizedBox(
                   height: 40,
                 ),
-                Container(
-                  height: 56,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    color: Color(0xff5865F2),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          "assets/images/Discord-Logo-White.svg",
-                          fit: BoxFit.fitHeight,
-                          height: 30,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          children: [
-                            SizedBox(
-                              height: 12,
-                              child: Text(
-                                'JOIN US ON\n',
-                                style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                    fontSize: 10),
+                GestureDetector(
+                  onTap: (() {
+                    launch("https://discord.gg/4jukVsrYRs");
+                  }),
+                  child: Container(
+                    height: 56,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Color(0xff5865F2),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            "assets/images/Discord-Logo-White.svg",
+                            fit: BoxFit.fitHeight,
+                            height: 30,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: 12,
+                                child: Text(
+                                  'JOIN US ON\n',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white,
+                                      fontSize: 10),
+                                ),
                               ),
-                            ),
-                            Text("Discord",
-                                style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                    fontSize: 18)),
-                          ],
-                        ),
-                      ],
+                              Text("Discord",
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 18)),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
