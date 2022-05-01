@@ -121,7 +121,7 @@ class _MySchedulePageState extends State<MySchedulePage> {
                       AutoSizeText(
                         description[0],
                         minFontSize: 10,
-                        maxLines: 2,
+                        maxLines: 3,
                         style: TextStyle(
                           color: Colors.grey,
                           fontFamily: "Poppins",
