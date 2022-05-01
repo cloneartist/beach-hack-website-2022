@@ -239,7 +239,7 @@ class _EventsState extends State<Events> {
 Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
     title, subtitle, content) {
   var screenWidth = MediaQuery.of(context).size.width;
-  List<bool> techFinished = [false, true, true];
+  List<bool> techFinished = [false, false, false];
   List<bool> gameFinished = [false, false, false];
   List<bool> Finished;
   isGame ? Finished = gameFinished : Finished = techFinished;

@@ -655,38 +655,65 @@ class _MobileViewState extends State<MobileView> {
                           gradient: gradientPurple2,
                           borderRadius: BorderRadius.circular(20)),
                       child: Padding(
-                        // padding: const EdgeInsets.all(60.0),
-
                         padding: const EdgeInsets.all(30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [
                             Text(
-                              "THEME\nCOMING SOON!",
+                              "THEME",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w700,
-                                fontSize: 30,
+                                fontSize: 28,
                               ),
                             ),
-                            // Text(
-                            //   "",
-                            //   style: TextStyle(
-                            //     color: Colors.white,
-                            //     fontFamily: 'Poppins',
-                            //     fontWeight: FontWeight.w300,
-                            //     fontSize: 24,
-                            //   ),
-                            // ),
-                            // const SizedBox(
-                            //   width: 60,
-                            // ),
-                            // Lottie.network(
-                            //   "https://assets9.lottiefiles.com/private_files/lf30_2u9Zt5.json",
-                            //   animate: true,
-                            //   fit: BoxFit.contain,
-                            // ),
+                            Text(
+                              "Develop solutions for specially abled to make their lives easier",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff242529),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            AutoSizeText(
+                              "PROBLEM STATEMENTS",
+                              maxLines: 1,
+                              maxFontSize: 28,
+                              minFontSize: 24,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Text(
+                              "RELEASING SOON!",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -1653,7 +1680,7 @@ TextStyle a4 = const TextStyle(
 Widget buildImageCard(bool isGame, int itemIndex, BuildContext context, image,
     title, subtitle, content) {
   var screenWidth = MediaQuery.of(context).size.width;
-  List<bool> techFinished = [false, true, true];
+  List<bool> techFinished = [false, false, false];
   List<bool> gameFinished = [false, false, false];
   List<bool> Finished;
   isGame ? Finished = gameFinished : Finished = techFinished;

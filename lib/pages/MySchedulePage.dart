@@ -37,16 +37,16 @@ class _MySchedulePageState extends State<MySchedulePage> {
     ];
 
     var titles = [
-      "Registration and Idea Submission",
-      "Prototype Submission",
+      "Registration Ends",
+      "Prototype and Idea Submission",
       "Publishing of shortlisted teams",
       "Inaugural ceremony and offline hackathon begins",
       "Concluding ceremony"
     ];
 
     var description = [
-      "Last date to register and to submit idea for the event",
-      "Last date to submit minimum viable product(MVP)",
+      "Last date to register for the event. Problem statements will be released on this date.",
+      "Last date to submit minimum viable product(MVP) and Idea",
       "Results of evaluation on the basis of MVP",
       "Marks the starting of 24-hour hackathon",
       "Final presentation and prize distribution"
