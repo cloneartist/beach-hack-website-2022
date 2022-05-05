@@ -1,0 +1,85 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"clean"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "flutter: flutter clean",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"get"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "flutter: flutter pub get",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"web",
+				"--release"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "flutter: flutter build web",
+			"detail": ""
+		},
+		{
+			"type": "shell",
+			"command": "Remove-Item C:\\Users\\jcupzz\\AndroidStudioProjects\\Flutter_Projects\\beach_hack_website\\public\\* -Recurse -Force",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "shell: Deleted hosted public directory",
+			"detail": ""
+		},
+		{
+			"type": "shell",
+			"command": "Copy-item -Force -Recurse -Verbose C:\\Users\\jcupzz\\AndroidStudioProjects\\Flutter_Projects\\beach_hack_website\\build\\web\\* -Destination C:\\Users\\jcupzz\\AndroidStudioProjects\\Flutter_Projects\\beach_hack_website\\public",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "shell: Copy from build/web to public directory",
+			"detail": ""
+		},
+		{
+			"type": "shell",
+			"command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "shell: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass",
+			"detail": ""
+		},
+		{
+			"type": "shell",
+			"command": "firebase deploy",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "shell: firebase deploy",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"apk"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "flutter: flutter build apk",
+			"detail": ""
+		}
+	]
+}

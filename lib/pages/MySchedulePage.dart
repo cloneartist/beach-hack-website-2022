@@ -28,10 +28,10 @@ class _MySchedulePageState extends State<MySchedulePage> {
     //schedule
 
     var dates = [
-      "4 May, 2022",
+      "7 May, 2022",
       // "4 Feb, 2022",
-      "10 May, 2022",
-      "11 May, 2022",
+      "13 May, 2022",
+      "14 May, 2022",
       "20 May, 2022",
       "21 May, 2022"
     ];
