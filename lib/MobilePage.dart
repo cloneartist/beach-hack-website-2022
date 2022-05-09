@@ -696,7 +696,7 @@ class _MobileViewState extends State<MobileView> {
                           children: [
                             AutoSizeText(
                               "PROBLEM STATEMENTS",
-                              maxLines: 1,
+                              maxLines: 2,
                               maxFontSize: 28,
                               minFontSize: 24,
                               style: TextStyle(
