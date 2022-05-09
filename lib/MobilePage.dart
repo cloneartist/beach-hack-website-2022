@@ -693,7 +693,7 @@ class _MobileViewState extends State<MobileView> {
                         padding: const EdgeInsets.all(30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             AutoSizeText(
                               "PROBLEM STATEMENTS",
                               maxLines: 1,
@@ -705,15 +705,85 @@ class _MobileViewState extends State<MobileView> {
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            Text(
-                              "RELEASING SOON!",
+                            SizedBox(
+                              height: 20,
+                            ),
+                            // Text(
+                            //   "RELEASING SOON!",
+                            //   style: TextStyle(
+                            //     color: Colors.white,
+                            //     fontFamily: 'Poppins',
+                            //     fontWeight: FontWeight.w600,
+                            //     fontSize: 20,
+                            //   ),
+                            // ),
+                            SelectableText(
+                              "\u2022 Develop an affordable solution for mute people with limited muscle movement to communicate with others.\n\n\u2022 Develop a solution to provide specially abled children with inclusive learning experience.\n\n\u2022 Develop a solution to make deaf people aware of their surroundings. For instance if someone calls their name in the background or some other sounds which require their attention, it should notify the user.\n\n\u2022 Develop a solution to make the internet more accessible to people with sensory disabilities.\n\n\u2022 Develop a software that helps people who doesn't have the ability to speak or move to communicate with others.\n\n\u2022 Specially abled youngsters are deprived of both physical and mental activities since they are restricted to their homes. Develop a software that will entertain and enhance their physical and mental abilities.\n ​",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                                color: Color(0xff898989),
+                                fontSize: 16,
+                                fontFamily: "Poppins",
                               ),
                             ),
+                            Row(
+                              children: [
+                                Expanded(
+                                    child: Divider(
+                                  color: Color(0xff898989),
+                                  endIndent: 10,
+                                  thickness: 1,
+                                )),
+                                Text(
+                                  "OR",
+                                  style: TextStyle(
+                                    color: Color(0xff898989),
+                                    fontFamily: "Poppins",
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Divider(
+                                    color: Color(0xff898989),
+                                    indent: 10,
+                                    thickness: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SelectableText(
+                              "\n\u2022 Open Statement",
+                              style: TextStyle(
+                                color: Color(0xff898989),
+                                fontSize: 20,
+                                fontFamily: "Poppins",
+                              ),
+                            ),
+                            SelectableText(
+                              "    You can choose any problem statement related to the theme and find solution to it.\n",
+                              style: TextStyle(
+                                color: Color(0xff898989),
+                                fontSize: 16,
+                                fontFamily: "Poppins",
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Divider(
+                                    color: Color(0xff898989),
+                                    thickness: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SelectableText(
+                              "\nNote: We mostly support software-based products. The inclusion of hardware is optional. However, if your solution only requires basic hardware, that's fine. A solution that is entirely hardware-based is not supported. Also it's completely fine if your solution only requires software and doesn't require any hardware.",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 183, 183, 183),
+                                fontSize: 18,
+                                fontStyle: FontStyle.italic,
+                                fontFamily: "Poppins",
+                              ),
+                            )
                           ],
                         ),
                       ),
