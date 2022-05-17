@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:beach_hack_4/constants/GradientText.dart';
 import 'package:beach_hack_4/pages/landing_page.dart';
@@ -708,15 +710,6 @@ class _MobileViewState extends State<MobileView> {
                             SizedBox(
                               height: 20,
                             ),
-                            // Text(
-                            //   "RELEASING SOON!",
-                            //   style: TextStyle(
-                            //     color: Colors.white,
-                            //     fontFamily: 'Poppins',
-                            //     fontWeight: FontWeight.w600,
-                            //     fontSize: 20,
-                            //   ),
-                            // ),
                             SelectableText(
                               "\u2022 Develop an affordable solution for mute people with limited muscle movement to communicate with others.\n\n\u2022 Develop a solution to provide specially abled children with inclusive learning experience.\n\n\u2022 Develop a solution to make deaf people aware of their surroundings. For instance if someone calls their name in the background or some other sounds which require their attention, it should notify the user.\n\n\u2022 Develop a solution to make the internet more accessible to people with sensory disabilities.\n\n\u2022 Develop a software that helps people who doesn't have the ability to speak or move to communicate with others.\n\n\u2022 Specially abled youngsters are deprived of both physical and mental activities since they are restricted to their homes. Develop a software that will entertain and enhance their physical and mental abilities.\n ​",
                               style: TextStyle(
@@ -791,6 +784,48 @@ class _MobileViewState extends State<MobileView> {
                     const SizedBox(
                       height: 20,
                     ),
+
+                    //Shortlisted Teams
+
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff242529),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            AutoSizeText(
+                              "SHORTLISTED TEAMS",
+                              maxLines: 2,
+                              maxFontSize: 28,
+                              minFontSize: 24,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            AutoSizeText(
+                              "Josephites\nTeam UEC\nMonster Killer\nCypher 2.0\nMAVS\nRenegades\nBroskis\nFin-Eazy\nCHROME\nMindHacks",
+                              style: textStyleOfShortlistedTeams,
+                              textAlign: TextAlign.center,
+                              maxLines: 10,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 20,
+                    ),
+
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -1670,6 +1705,13 @@ class _MobileViewState extends State<MobileView> {
     );
   }
 }
+
+TextStyle textStyleOfShortlistedTeams = const TextStyle(
+  color: Color(0xff898989),
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+  fontSize: 24,
+);
 
 _sendEmail(String toMailId, String subject, String body) async {
   var url = 'mailto:$toMailId?subject=$subject&body=$body';
