@@ -379,6 +379,152 @@ class Intro extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(60, 60, 60, 60),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Color(0xff242529), width: 2),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: Text(
+                      "Shortlisted Teams",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      gradient: RadialGradient(colors: [
+                        Color.fromARGB(255, 69, 68, 68),
+                        Colors.black,
+                      ], radius: 2, focal: Alignment.center),
+                    ),
+                    child: GridView(
+                      shrinkWrap: true,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisSpacing: 2,
+                        mainAxisSpacing: 2,
+                        crossAxisCount: 3,
+                        childAspectRatio: 5,
+                      ),
+                      children: <Widget>[
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Josephites",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Team UEC",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "MindHacks",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "CHROME",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Broskis",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Fin-Eazy",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Renegades",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "MAVS",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Cypher 2.0",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                        ),
+                        Container(
+                          color: Colors.black,
+                          child: Center(
+                            child: Text(
+                              "Monster Killer",
+                              style: textStyleOfShortlistedTeams,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),
@@ -421,4 +567,11 @@ const gradientPurple = LinearGradient(
 );
 const gradientPurple2 = LinearGradient(
   colors: [Color(0xffB813E1), Color(0xffF52C99)],
+);
+
+TextStyle textStyleOfShortlistedTeams = TextStyle(
+  color: Color(0xff898989),
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+  fontSize: 30,
 );
