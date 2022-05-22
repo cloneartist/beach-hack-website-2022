@@ -827,6 +827,45 @@ class _MobileViewState extends State<MobileView> {
                     ),
 
                     Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff242529),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            AutoSizeText(
+                              "Winners",
+                              maxLines: 1,
+                              maxFontSize: 32,
+                              minFontSize: 28,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            AutoSizeText(
+                              "Fin-Eazy\nMonster Killer\nMindHacks",
+                              style: textStyleOfShortlistedTeams,
+                              textAlign: TextAlign.center,
+                              maxLines: 3,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 20,
+                    ),
+
+                    Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: const Color(0xff242529),

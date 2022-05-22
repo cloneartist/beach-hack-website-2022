@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:beach_hack_4/constants/GradientText.dart';
 import 'package:flutter/material.dart';
@@ -519,6 +521,60 @@ class Intro extends StatelessWidget {
                         ),
                         Container(
                           color: Colors.black,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Color(0xff242529),
+                  borderRadius: BorderRadius.circular(20)),
+              height: screenWidth * 0.4,
+              child: Stack(
+                children: [
+                  Container(
+                    child: Lottie.network(
+                      'https://assets6.lottiefiles.com/packages/lf20_dwm2hi59.json',
+                      animate: true,
+                      width: screenWidth,
+                      height: screenWidth * 0.4,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(0, -0.8),
+                    child: AutoSizeText(
+                      "Winners",
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        fontSize: 60,
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Fin-Eazy",
+                          style: textStyleOfShortlistedTeams,
+                        ),
+                        Text(
+                          "Monster Killer",
+                          style: textStyleOfShortlistedTeams,
+                        ),
+                        Text(
+                          "MindHacks",
+                          style: textStyleOfShortlistedTeams,
                         ),
                       ],
                     ),
